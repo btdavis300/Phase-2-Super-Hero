@@ -24,6 +24,10 @@ function App() {
     return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
+  function handleAddHero(newHero) {
+    setHeroes([...heroes, newHero])
+  }
+
   return (
     <div id="container">
       <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
@@ -33,7 +37,7 @@ function App() {
             <Home heroes={displayedHeroes} />
           </Route>
           <Route exact path="/MYO">
-            <MakeYourOwn />
+            <MakeYourOwn onAddHero={handleAddHero} />
           </Route>
           <Route exact path="/favorites">
             <Favorites />
