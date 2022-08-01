@@ -1,6 +1,6 @@
 import React from "react";
 
-function Form({ searchTerm, onSearchChange }) {
+function Search({ searchTerm, onSearchChange }) {
   return (
     <>
       <h3 id="search-title">Find your Superhero</h3>
@@ -17,4 +17,4 @@ function Form({ searchTerm, onSearchChange }) {
   );
 }
 
-export default Form;
+export default Search;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import TestCmp from "./components/TestCmp";
+import HeroContainer from "./components/HeroContainer";
+import Search from "./components/Search";
 import "./App.css";
-import Form from "./components/Form";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -23,8 +23,8 @@ function App() {
   return (
     <div id="container">
       <h1 id="top">- SUPERHEROES -</h1>
-      <Form onSearchChange={setSearchTerm} searchTerm={searchTerm} />
-      <TestCmp images={displayedImages} />
+      <Search onSearchChange={setSearchTerm} searchTerm={searchTerm} />
+      <HeroContainer images={displayedImages} />
     </div>
   );
 }

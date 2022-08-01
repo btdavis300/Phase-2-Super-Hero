@@ -67,6 +67,7 @@
 #images {
   border-radius: 35px;
   margin: 20px;
+  cursor: pointer;
 }
 
 #search-title {
