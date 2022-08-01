@@ -8,33 +8,29 @@ import NavBar from "./components/NavBar";
 import Search from "./components/Search";
 
 function App() {
-  const [images, setImages] = useState([]);
+  const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes")
       .then((res) => res.json())
       .then((imageData) => {
-        setImages(imageData);
+        setHeroes(imageData);
         console.log(imageData);
       });
   }, []);
 
-  const displayedImages = images.filter((image) => {
-    return image.name.toLowerCase().includes(searchTerm.toLowerCase());
+  const displayedHeroes = heroes.filter((hero) => {
+    return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   return (
     <div id="container">
-      <NavBar
-        images={displayedImages}
-        onSearchChange={setSearchTerm}
-        searchTerm={searchTerm}
-      />
+      <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
       <div id="nav">
         <Switch>
           <Route exact path="/">
-            <Home images={displayedImages} />
+            <Home heroes={displayedHeroes} />
           </Route>
           <Route exact path="/categories">
             <Categories />

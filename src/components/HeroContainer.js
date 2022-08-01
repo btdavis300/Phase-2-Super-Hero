@@ -1,12 +1,11 @@
 import React from "react";
 import HeroCard from "./HeroCard";
 
-function HeroContainer({ images }) {
-
-  const imagesArr = images.map((image) => {
-    return <HeroCard key={image.id} image={image} />;
+function HeroContainer({ heroes }) {
+  const heroArr = heroes.map((hero) => {
+    return <HeroCard key={hero.id} hero={hero} />;
   });
-  return <div id="image-field"> {imagesArr} </div>;
+  return <div id="image-field"> {heroArr} </div>;
 }
 
 export default HeroContainer;
