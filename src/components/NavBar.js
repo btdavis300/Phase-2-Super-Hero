@@ -8,6 +8,7 @@ const NavBar = ({ onSearchChange, searchTerm }) => {
       <Link to="/">Home</Link>
       <Link to="/favorites">Favorites</Link>
       <Link to="/categories">Categories</Link>
+      <Link to="/MYO">Make Your Own</Link>
       <Search onSearchChange={onSearchChange} searchTerm={searchTerm} />
     </div>
   );

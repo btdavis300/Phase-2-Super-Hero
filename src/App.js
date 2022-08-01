@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Categories from "./components/Categories";
+import MakeYourOwn from "./components/MakeYourOwn";
 import Favorites from "./components/Favorites";
 import NavBar from "./components/NavBar";
+import Categories from "./components/Categories";
 
 function App() {
   const [heroes, setHeroes] = useState([]);
@@ -31,11 +32,14 @@ function App() {
           <Route exact path="/">
             <Home heroes={displayedHeroes} />
           </Route>
-          <Route exact path="/categories">
-            <Categories />
+          <Route exact path="/MYO">
+            <MakeYourOwn />
           </Route>
           <Route exact path="/favorites">
             <Favorites />
+          </Route>
+          <Route exact path="/categories">
+            <Categories />
           </Route>
         </Switch>
       </div>
