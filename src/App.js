@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from "react";
 import TestCmp from "./components/TestCmp";
 import "./App.css";
+import Form from "./components/Form";
 
 function App() {
-  const [test, setTest] = useState([]);
+  const [images, setImages] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json")
+    fetch("http://localhost:3000/superheroes")
       .then((res) => res.json())
-      .then((data) => {
-        setTest(data);
-        console.log(data);
+      .then((imageData) => {
+        setImages(imageData);
+        console.log(imageData);
       });
   }, []);
 
+  const displayedImages = images.filter((image) => {
+    return image.name.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
   return (
-    <div>
-      <TestCmp test={test} />
+    <div id="container">
+      <h1 id="top">- SUPERHEROES -</h1>
+      <Form onSearchChange={setSearchTerm} searchTerm={searchTerm} />
+      <TestCmp images={displayedImages} />
     </div>
   );
 }

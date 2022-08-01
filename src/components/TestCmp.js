@@ -1,11 +1,11 @@
 import React from "react";
 import TestRndr from "./TestRndr";
 
-function TestCmp({ test }) {
-  const testArr = test.map((ins) => {
-    return <TestRndr key={ins.id} ins={ins} />;
+function TestCmp({ images }) {
+  const imagesArr = images.map((image) => {
+    return <TestRndr key={image.id} image={image} />;
   });
-  return <div>{testArr}</div>;
+  return <div id="image-field">{imagesArr}</div>;
 }
 
 export default TestCmp;

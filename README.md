@@ -1,5 +1,5 @@
-Pitch: 
-Superhero Database will allow users to learn more about their favorite superhero. 
+Pitch:
+Superhero Database will allow users to learn more about their favorite superhero.
 
 User Stories:
 

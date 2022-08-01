@@ -1,11 +1,10 @@
 import React from "react";
 
-function TestRndr({ ins }) {
+function TestRndr({ image }) {
   return (
-    <div>
-      <h1>{ins.name}</h1>
-      <img src={ins.images.lg} alt={ins.id} id="images"></img>
-      <p>{ins.work.occupation}</p>
+    <div id="image-container">
+      <h4 id="titles">{image.name}</h4>
+      <img src={image.images.sm} alt={image.id} id="images"></img>
     </div>
   );
 }
