@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import Home from "./components/Home"
-import Categories from "./components/Categories"
-import Favorites from "./components/Favorites"
+import Home from "./components/Home";
+import Categories from "./components/Categories";
+import Favorites from "./components/Favorites";
 import NavBar from "./components/NavBar";
 import Search from "./components/Search";
-
 
 function App() {
   const [images, setImages] = useState([]);
@@ -25,11 +24,14 @@ function App() {
     return image.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-
   return (
     <div id="container">
-      <NavBar />
-      <div id='nav'>
+      <NavBar
+        images={displayedImages}
+        onSearchChange={setSearchTerm}
+        searchTerm={searchTerm}
+      />
+      <div id="nav">
         <Switch>
           <Route exact path="/">
             <Home images={displayedImages} />
@@ -42,9 +44,8 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <Search onSearchChange={setSearchTerm} searchTerm={searchTerm} />
     </div>
-  )
+  );
 }
 
 export default App;
