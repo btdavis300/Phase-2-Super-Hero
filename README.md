@@ -14,3 +14,5 @@ User Stories:
 -As a user, I can “favorite” a superhero and add it to my Favorites List.
 
 -As a user, I can view my list of favorite superheroes.
+
+![2022-08-01 09-41](https://user-images.githubusercontent.com/100324379/182188058-069c84cf-7456-4111-89f6-f4957231965c.jpeg)
