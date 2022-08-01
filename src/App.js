@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HeroContainer from "./components/HeroContainer";
 import Search from "./components/Search";
+import NavBar from "./components/NavBar";
 import "./App.css";
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
 
   return (
     <div id="container">
-      <h1 id="top">- SUPERHEROES -</h1>
-      <Search onSearchChange={setSearchTerm} searchTerm={searchTerm} />
+      <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
+      {/* <h1 id="top">- SUPERHEROES -</h1> */}
+      {/* <Search onSearchChange={setSearchTerm} searchTerm={searchTerm} /> */}
       <HeroContainer images={displayedImages} />
     </div>
   );
