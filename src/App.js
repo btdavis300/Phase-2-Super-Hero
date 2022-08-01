@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import Categories from "./components/Categories";
 import Favorites from "./components/Favorites";
 import NavBar from "./components/NavBar";
-import Search from "./components/Search";
 
 function App() {
   const [heroes, setHeroes] = useState([]);
