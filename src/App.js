@@ -10,13 +10,13 @@ import Categories from "./components/Categories";
 function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [favClicked, setFavClicked] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes")
       .then((res) => res.json())
-      .then((imageData) => {
-        setHeroes(imageData);
-        console.log(imageData);
+      .then((heroData) => {
+        setHeroes(heroData.reverse());
       });
   }, []);
 
@@ -24,8 +24,23 @@ function App() {
     return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
+  function handleFavorites(clickedHero) {
+    fetch(`http://localhost:3000/superheroes/${clickedHero.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ ...clickedHero, favorite: favClicked }),
+    })
+    const updatedHeroes = heroes.map((hero) => {
+      if (hero.id === clickedHero.id) return { ...hero, favorite: favClicked };
+      return hero;
+    });
+    setHeroes(updatedHeroes)
+  }
+
   function handleAddHero(newHero) {
-    setHeroes([...heroes, newHero])
+    setHeroes([newHero, ...heroes,])
   }
 
   return (
@@ -36,11 +51,16 @@ function App() {
           <Route exact path="/">
             <Home heroes={displayedHeroes} />
           </Route>
-          <Route exact path="/MYO">
+          <Route exact path="/MYO" >
             <MakeYourOwn onAddHero={handleAddHero} />
           </Route>
           <Route exact path="/favorites">
-            <Favorites />
+            <Favorites
+              heroes={heroes}
+              favClicked={favClicked}
+              setFavClicked={setFavClicked}
+              handleFavorites={handleFavorites}
+            />
           </Route>
           <Route exact path="/categories">
             <Categories />
