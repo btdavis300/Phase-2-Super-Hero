@@ -30262,6 +30262,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "name": "jh",
       "images": {},
       "powerstats": {
@@ -30327,6 +30328,21 @@
         "combat": "23"
       },
       "id": 736
+=======
+      "name": "Zoom pt 2",
+      "images": {
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/731-zoom.jpg"
+      },
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "100",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "id": 732
+>>>>>>> test
     }
   ]
 }
