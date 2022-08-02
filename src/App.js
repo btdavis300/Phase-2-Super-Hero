@@ -10,13 +10,16 @@ import Categories from "./components/Categories";
 function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [favClicked, setFavClicked] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes")
       .then((res) => res.json())
-      .then((imageData) => {
-        setHeroes(imageData);
-        console.log(imageData);
+      .then((heroArr) => {
+        setHeroes(heroArr.map((hero) => {
+          return { ...hero, favorite: false }
+        }));
+        console.log(heroArr);
       });
   }, []);
 
@@ -24,19 +27,43 @@ function App() {
     return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
+  function handleFavorites(clickedHero) {
+    fetch(`http://localhost:3000/superheroes/${clickedHero.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ ...clickedHero, favorite: favClicked }),
+    })
+    const updatedHeroes = heroes.map((hero) => {
+      if (hero.id === clickedHero.id) return { ...hero, favorite: favClicked };
+      return hero;
+    });
+    setHeroes(updatedHeroes)
+  }
+
   return (
     <div id="container">
       <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
       <div id="nav">
         <Switch>
           <Route exact path="/">
-            <Home heroes={displayedHeroes} />
+            <Home
+              heroes={displayedHeroes}
+              handleFavorites={handleFavorites}
+              favClicked={favClicked}
+              setFavClicked={setFavClicked} />
           </Route>
           <Route exact path="/MYO">
             <MakeYourOwn />
           </Route>
           <Route exact path="/favorites">
-            <Favorites />
+            <Favorites
+              heroes={heroes}
+              favClicked={favClicked}
+              setFavClicked={setFavClicked}
+              handleFavorites={handleFavorites}
+            />
           </Route>
           <Route exact path="/categories">
             <Categories />

@@ -6,10 +6,18 @@ import powerIcon from '../assets/power.png';
 import speedIcon from '../assets/speed.png';
 import strengthIcon from '../assets/strength.png';
 
-function HeroCard({ hero }) {
+function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
   const { intelligence, strength, speed, durability, power, combat } = hero.powerstats
   function displayHero() {
     console.log(hero)
+  }
+
+  function onFavorite(e) {
+    e.stopPropagation()
+    setFavClicked((favClicked) => !favClicked)
+    console.log(favClicked)
+    handleFavorites(hero)
+
   }
 
   return (
@@ -26,6 +34,7 @@ function HeroCard({ hero }) {
         </ul>
       </div>
       <img src={hero.images.sm} alt={hero.id} id="images"></img>
+      <button onClick={onFavorite}>{(hero.favorite ? "Remove from Favorites" : "Add to Favorites")}</button>
     </div>
   );
 }
