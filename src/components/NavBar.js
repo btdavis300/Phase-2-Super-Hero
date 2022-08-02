@@ -7,7 +7,7 @@ const NavBar = ({ onSearchChange, searchTerm }) => {
     <div className="topnav">
       <Link to="/">Home</Link>
       <Link to="/favorites">Favorites</Link>
-      <Link to="/categories">Categories</Link>
+      <Link to="/sortby">Sort By</Link>
       <Link to="/MYO">Make Your Own</Link>
       <Search onSearchChange={onSearchChange} searchTerm={searchTerm} />
     </div>
