@@ -30299,6 +30299,34 @@
         "combat": "2"
       },
       "id": 734
+    },
+    {
+      "name": "some ramen",
+      "images": {},
+      "powerstats": {
+        "intelligence": "1",
+        "strength": "1",
+        "speed": "1",
+        "durability": "1",
+        "power": "1",
+        "combat": "1"
+      },
+      "id": 735
+    },
+    {
+      "name": "kjhasd",
+      "images": {
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/652-t-x.jpg"
+      },
+      "powerstats": {
+        "intelligence": "1",
+        "strength": "1",
+        "speed": "",
+        "durability": "",
+        "power": "23",
+        "combat": "23"
+      },
+      "id": 736
     }
   ]
 }

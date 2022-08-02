@@ -8,9 +8,8 @@ import strengthIcon from "../assets/strength.png";
 
 function HeroCard({ hero }) {
   function displayHero() {
-    console.log(hero);
+    console.log(hero.images.sm);
   }
-
   return (
     <div id="image-container" onClick={displayHero}>
       <h4 id="titles">{hero.name}</h4>
@@ -60,7 +59,7 @@ function HeroCard({ hero }) {
           </li>
         </ul>
       </div>
-      <img src={hero.images.sm} alt={hero.id} id="images"></img>
+      <img src={hero.images.sm} alt={hero.images.sm} id="images"></img>
     </div>
   );
 }

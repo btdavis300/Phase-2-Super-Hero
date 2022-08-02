@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function MakeYourOwn({ onAddHero }) {
   const [name, setName] = useState("");
-  const [images, setImages] = useState("");
+  const [sm, setSm] = useState("");
   const [intelligence, setIntelligence] = useState("");
   const [strength, setStrength] = useState("");
   const [speed, setSpeed] = useState("");
@@ -20,7 +20,7 @@ function MakeYourOwn({ onAddHero }) {
       body: JSON.stringify({
         name: name,
         images: {
-          sm: images.sm,
+          sm: sm,
         },
         powerstats: {
           intelligence: intelligence,
@@ -51,8 +51,8 @@ function MakeYourOwn({ onAddHero }) {
           type="text"
           name="image"
           placeholder="Image"
-          value={images}
-          onChange={(e) => setImages(e.target.value)}
+          value={sm}
+          onChange={(e) => setSm(e.target.value)}
         />
         <input
           type="text"
