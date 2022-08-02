@@ -45,12 +45,7 @@
         "groupAffiliation": "Hulk Family; Excelsior (sponsor), Avengers (honorary member); formerly partner of the Hulk, Captain America and Captain Marvel; Teen Brigade; ally of Rom",
         "relatives": "Marlo Chandler-Jones (wife); Polly (aunt); Mrs. Chandler (mother-in-law); Keith Chandler, Ray Chandler, three unidentified others (brothers-in-law); unidentified father (deceased); Jackie Shorr (alleged mother; unconfirmed)"
       },
-      "images": {
-        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/1-a-bomb.jpg",
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/1-a-bomb.jpg",
-        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
-        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
-      }
+      "images": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/1-a-bomb.jpg"
     },
     {
       "id": 2,
@@ -99,12 +94,7 @@
         "groupAffiliation": "Bureau for Paranormal Research and Defense",
         "relatives": "Edith Howard (wife, deceased)"
       },
-      "images": {
-        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/2-abe-sapien.jpg",
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/2-abe-sapien.jpg",
-        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/2-abe-sapien.jpg",
-        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/2-abe-sapien.jpg"
-      }
+      "images": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/2-abe-sapien.jpg"
     },
     {
       "id": 3,
@@ -151,12 +141,7 @@
         "groupAffiliation": "Green Lantern Corps, Black Lantern Corps",
         "relatives": "Amon Sur (son), Arin Sur (sister), Thaal Sinestro (brother-in-law), Soranik Natu (niece)"
       },
-      "images": {
-        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/3-abin-sur.jpg",
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/3-abin-sur.jpg",
-        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/3-abin-sur.jpg",
-        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/3-abin-sur.jpg"
-      }
+      "images": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/3-abin-sur.jpg"
     },
     {
       "id": 4,
@@ -204,12 +189,7 @@
         "groupAffiliation": "former member of the crew of the Andromeda Starship, ally of the Abominations and Forgotten",
         "relatives": "Nadia Dornova Blonsky (wife, separated)"
       },
-      "images": {
-        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/4-abomination.jpg",
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/4-abomination.jpg",
-        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/4-abomination.jpg",
-        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/4-abomination.jpg"
-      }
+      "images": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/4-abomination.jpg"
     },
     {
       "id": 5,
@@ -30280,6 +30260,45 @@
         "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/731-zoom.jpg",
         "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/731-zoom.jpg"
       }
+    },
+    {
+      "name": "jh",
+      "images": {},
+      "powerstats": {
+        "intelligence": "h",
+        "strength": "h",
+        "speed": "h",
+        "durability": "h",
+        "power": "h",
+        "combat": "h"
+      },
+      "id": 732
+    },
+    {
+      "name": "TEST",
+      "images": {},
+      "powerstats": {
+        "intelligence": "1",
+        "strength": "1",
+        "speed": "1",
+        "durability": "1",
+        "power": "1",
+        "combat": "1"
+      },
+      "id": 733
+    },
+    {
+      "name": "kjahsgd",
+      "images": {},
+      "powerstats": {
+        "intelligence": "2",
+        "strength": "2",
+        "speed": "2",
+        "durability": "2",
+        "power": "2",
+        "combat": "2"
+      },
+      "id": 734
     }
   ]
 }

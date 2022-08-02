@@ -12,17 +12,21 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/superheroes")
+    fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
       .then((imageData) => {
-        setHeroes(imageData);
-        console.log(imageData);
+        setHeroes(imageData.reverse());
       });
   }, []);
 
   const displayedHeroes = heroes.filter((hero) => {
     return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
+
+  function handleAddHero(newHero) {
+    const updatedHeroesArr = [newHero, ...heroes];
+    setHeroes(updatedHeroesArr);
+  }
 
   return (
     <div id="container">
@@ -33,7 +37,7 @@ function App() {
             <Home heroes={displayedHeroes} />
           </Route>
           <Route exact path="/MYO">
-            <MakeYourOwn />
+            <MakeYourOwn onAddHero={handleAddHero} />
           </Route>
           <Route exact path="/favorites">
             <Favorites />
