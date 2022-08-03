@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeroCard from "./HeroCard";
 
-function SortBy({ heroes, setHeroes, isClicked }) {
+function SortBy({ heroes, setHeroes }) {
   //STATE
   const [intelOrder, setIntelOrder] = useState(true);
   const [strengthOrder, setStrengthOrder] = useState(true);

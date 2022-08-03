@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 
-const NavBar = ({ onSearchChange, searchTerm }) => {
+const NavBar = ({ onSearchChange, searchTerm, onGoBack }) => {
   return (
     <div className="topnav">
       <Link to="/">Home</Link>
@@ -15,3 +15,5 @@ const NavBar = ({ onSearchChange, searchTerm }) => {
 };
 
 export default NavBar;
+
+// onClick={onGoBack}
