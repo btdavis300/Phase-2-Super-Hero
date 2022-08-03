@@ -8,6 +8,7 @@ import strengthIcon from "../assets/strength.png";
 
 function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
   function displayHero() {
+    console.log('show me the specs')
   }
 
   function onFavorite(e) {
@@ -17,8 +18,8 @@ function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
   }
 
   return (
-    <div id="image-container" onClick={displayHero}>
-      <h4 id="titles">{hero.name}</h4>
+    <div id="image-container" >
+      <h4 id="titles" onClick={displayHero}>{hero.name}</h4>
       <div id="hero-powerstats">
         <ul>
           <li>
@@ -65,7 +66,7 @@ function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
           </li>
         </ul>
       </div>
-      <img src={hero.images.sm} alt="" id="images"></img>
+      <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
       <button onClick={onFavorite}>
         {hero.favorite ? "Remove from Favorites" : "Add to Favorites"}
       </button>
