@@ -6,6 +6,8 @@ function SortBy({ heroes, setHeroes, isClicked }) {
   const [strengthOrder, setStrengthOrder] = useState(true);
   const [speedOrder, setSpeedOrder] = useState(true);
   const [durabilityOrder, setDurabilityOrder] = useState(true);
+  const [powerOrder, setPowerOrder] = useState(true);
+  const [combatOrder, setCombatOrder] = useState(true);
 
   const heroesArr = heroes.map((hero) => {
     return <HeroCard key={hero.id} hero={hero} />
@@ -36,13 +38,13 @@ function SortBy({ heroes, setHeroes, isClicked }) {
         id="strength"
         onClick={(e) => onSort(e, "strength", strengthOrder, setStrengthOrder)}
       >
-        strength
+        Sort by Strength
       </button>
       <button
         id="speed"
         onClick={(e) => onSort(e, "speed", speedOrder, setSpeedOrder)}
       >
-        speed
+        Sort by Speed
       </button>
       <button
         id="durability"
@@ -50,7 +52,23 @@ function SortBy({ heroes, setHeroes, isClicked }) {
           onSort(e, "durability", durabilityOrder, setDurabilityOrder)
         }
       >
-        durability
+        Sort by Durability
+      </button>
+      <button
+        id="power"
+        onClick={(e) =>
+          onSort(e, "power", powerOrder, setPowerOrder)
+        }
+      >
+        Sort by Power
+      </button>
+      <button
+        id="combat"
+        onClick={(e) =>
+          onSort(e, "combat", combatOrder, setCombatOrder)
+        }
+      >
+        Sort by Combat
       </button>
 
       <div>{heroesArr}</div>
