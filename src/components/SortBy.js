@@ -12,8 +12,8 @@ function SortBy({ heroes, setHeroes, isClicked }) {
 
   //MAPPING
   const heroesArr = heroes.map((hero) => {
-    return <HeroCard key={hero.id} hero={hero} />;
-  });
+    return <HeroCard key={hero.id} hero={hero} />
+  })
 
   //SORTING
   function onSort(e, attr, order, setOrder) {
@@ -31,7 +31,6 @@ function SortBy({ heroes, setHeroes, isClicked }) {
   return (
     <div
       id="button-container"
-      style={{ display: isClicked === true ? "none" : "" }}
     >
       <button
         id="intelligence"
@@ -57,6 +56,7 @@ function SortBy({ heroes, setHeroes, isClicked }) {
           onSort(e, "durability", durabilityOrder, setDurabilityOrder)
         }
       >
+<<<<<<< HEAD
         Sort By Durability
       </button>
       <button
@@ -70,6 +70,25 @@ function SortBy({ heroes, setHeroes, isClicked }) {
         onClick={(e) => onSort(e, "combat", combatOrder, setCombatOrder)}
       >
         Sort By Combat
+=======
+        Sort by Durability
+      </button>
+      <button
+        id="power"
+        onClick={(e) =>
+          onSort(e, "power", powerOrder, setPowerOrder)
+        }
+      >
+        Sort by Power
+      </button>
+      <button
+        id="combat"
+        onClick={(e) =>
+          onSort(e, "combat", combatOrder, setCombatOrder)
+        }
+      >
+        Sort by Combat
+>>>>>>> kelan1
       </button>
 
       <div>{heroesArr}</div>

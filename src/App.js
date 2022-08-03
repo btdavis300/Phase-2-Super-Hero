@@ -10,14 +10,14 @@ import SortBy from "./components/SortBy.js";
 function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [favClicked, setFavClicked] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const [featuredHero, setFeaturedHero] = useState({})
+  const [showHeroSpecs, setShowHeroSpecs] = useState(false)
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
       .then((heroData) => {
-        setHeroes(heroData.reverse());
+        setHeroes(heroData);
       });
   }, []);
 
@@ -25,23 +25,21 @@ function App() {
     return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-  function handleFavorites(clickedHero) {
-    fetch(`http://localhost:3000/superheroes/${clickedHero.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ ...clickedHero, favorite: favClicked }),
-    });
-    const updatedHeroes = heroes.map((hero) => {
-      if (hero.id === clickedHero.id) return { ...hero, favorite: favClicked };
-      return hero;
-    });
-    setHeroes(updatedHeroes);
-  }
 
   function handleAddHero(newHero) {
     setHeroes([newHero, ...heroes]);
+  }
+
+  function handleHeroCardClick(hero) {
+    console.log(featuredHero)
+    console.log(hero)
+    setFeaturedHero(featuredHero => !featuredHero)
+    setShowHeroSpecs({
+      name: hero.name,
+      images: {
+        lg: hero.images.lg,
+      }
+    })
   }
 
   return (
@@ -50,7 +48,7 @@ function App() {
       <div id="nav">
         <Switch>
           <Route exact path="/">
-            <Home heroes={displayedHeroes} />
+            <Home heroes={displayedHeroes} featuredHero={featuredHero} showHeroSpecs={showHeroSpecs} onHeroCardClick={handleHeroCardClick} />
           </Route>
           <Route exact path="/MYO">
             <MakeYourOwn onAddHero={handleAddHero} />
@@ -58,14 +56,10 @@ function App() {
           <Route exact path="/favorites">
             <Favorites
               heroes={heroes}
-              favClicked={favClicked}
-              setFavClicked={setFavClicked}
-              handleFavorites={handleFavorites}
             />
           </Route>
           <Route exact path="/sortby">
             <SortBy
-              isClicked={isClicked}
               heroes={heroes}
               setHeroes={setHeroes}
             />

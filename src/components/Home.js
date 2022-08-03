@@ -1,6 +1,8 @@
 import React from "react";
 import HeroContainer from "./HeroContainer";
+import HeroSpecs from "./HeroSpecs";
 
+<<<<<<< HEAD
 const Home = ({ heroes, handleFavorites, favClicked, setFavClicked }) => {
   return (
     <div>
@@ -12,6 +14,14 @@ const Home = ({ heroes, handleFavorites, favClicked, setFavClicked }) => {
       />
     </div>
   );
+=======
+const Home = ({ heroes, featuredHero, showHeroSpecs, onHeroCardClick }) => {
+    return (
+        <div>
+            {showHeroSpecs ? <HeroSpecs showHeroSpecs={showHeroSpecs} /> : <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />}
+        </div>
+    );
+>>>>>>> kelan1
 };
 
 export default Home;

@@ -6,18 +6,18 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
-  function displayHero() {}
+function HeroCard({ hero, onHeroCardClick }) {
 
-  function onFavorite(e) {
-    e.stopPropagation();
-    setFavClicked((favClicked) => !favClicked);
-    handleFavorites(hero);
+
+
+  function displayHero() {
+    onHeroCardClick(hero)
   }
 
+
   return (
-    <div id="image-container" onClick={displayHero}>
-      <h4 id="titles">{hero.name}</h4>
+    <div id="image-container" >
+      <h4 id="titles" onClick={displayHero}>{hero.name}</h4>
       <div id="hero-powerstats">
         <ul>
           <li>
@@ -64,9 +64,14 @@ function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
           </li>
         </ul>
       </div>
+<<<<<<< HEAD
       <img src={hero.images.sm} alt="" id="images"></img>
       <button id="favorites-button" onClick={onFavorite}>
         {hero.favorite ? "Remove from Favorites" : "Add to Favorites"}
+=======
+      <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
+      <button> Add to Favorites
+>>>>>>> kelan1
       </button>
     </div>
   );
