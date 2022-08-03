@@ -17,8 +17,8 @@ function HeroCard({ hero, onHeroCardClick }) {
         {hero.name}
       </h4>
       <div id="hero-powerstats">
-        <ul>
-          <li>
+        <div>
+          <span>
             {" "}
             <img
               className="stats-icons"
@@ -26,8 +26,8 @@ function HeroCard({ hero, onHeroCardClick }) {
               alt="intelligence"
             />{" "}
             {hero.powerstats.intelligence}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img
               className="stats-icons"
@@ -35,13 +35,14 @@ function HeroCard({ hero, onHeroCardClick }) {
               alt="strength"
             />{" "}
             {hero.powerstats.strength}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img className="stats-icons" src={speedIcon} alt="speed" />{" "}
-            {hero.powerstats.speed}{" "}
-          </li>
-          <li>
+            {hero.powerstats.speed}
+          </span>
+          <br></br>
+          <span>
             {" "}
             <img
               className="stats-icons"
@@ -49,21 +50,23 @@ function HeroCard({ hero, onHeroCardClick }) {
               alt="durability"
             />{" "}
             {hero.powerstats.durability}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img className="stats-icons" src={powerIcon} alt="power" />{" "}
             {hero.powerstats.power}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img className="stats-icons" src={combatIcon} alt="combat" />{" "}
             {hero.powerstats.combat}{" "}
-          </li>
-        </ul>
+          </span>
+        </div>
       </div>
       <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
-      <button> Add to Favorites</button>
+      <div>
+        <button id="add-to-favs">Add to Favorites</button>
+      </div>
     </div>
   );
 }

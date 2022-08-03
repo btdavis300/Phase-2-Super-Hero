@@ -47,12 +47,14 @@
 }
 
 #titles {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: 100;
   text-align: center;
   cursor: pointer;
   color: black;
   background-color: white;
+  padding-top: 50px;
+  display: inline-block;
 }
 
 #titles:hover {
@@ -86,6 +88,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
+  text-align: center;
 }
 
 .topnav {
@@ -151,7 +154,7 @@
 
 #hero-powerstats {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 ul {
@@ -203,4 +206,41 @@ ul {
 
 #button-container {
   display: block;
+  text-align: center;
+}
+
+#specs-favs {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#specs-favs:hover {
+  color: white;
+  background-color: black;
+}
+
+#specs-back {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#specs-back:hover {
+  color: white;
+  background-color: black;
+}
+
+#add-to-favs {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#add-to-favs:hover {
+  color: white;
+  background-color: black;
 }

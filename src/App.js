@@ -40,7 +40,11 @@ function App() {
 
   return (
     <div id="container">
-      <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
+      <NavBar
+        onSearchChange={setSearchTerm}
+        searchTerm={searchTerm}
+        onGoBack={handleGoBack}
+      />
       <div id="nav">
         <Switch>
           <Route exact path="/">

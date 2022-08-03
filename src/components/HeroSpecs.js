@@ -57,8 +57,10 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack }) {
         </ul>
       </div>
       <img src={featuredHero.images.lg} alt="" id="images"></img>
-      <button>Add to Favorites</button>
-      <button onClick={onGoBack}>Back to Collection</button>
+      <button id="specs-favs">Add to Favorites</button>
+      <button id="specs-back" onClick={onGoBack}>
+        Back to Collection
+      </button>
     </div>
   );
 }
