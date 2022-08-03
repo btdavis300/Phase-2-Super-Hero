@@ -10,7 +10,8 @@ import SortBy from "./components/SortBy.js";
 function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [isClicked, setIsClicked] = useState(false)
+  const [featuredHero, setFeaturedHero] = useState({})
+  const [showHeroSpecs, setShowHeroSpecs] = useState(false)
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
@@ -29,13 +30,17 @@ function App() {
     setHeroes([newHero, ...heroes]);
   }
 
+  function handleHeroCardClick(hero) {
+
+  }
+
   return (
     <div id="container">
       <NavBar onSearchChange={setSearchTerm} searchTerm={searchTerm} />
       <div id="nav">
         <Switch>
           <Route exact path="/">
-            <Home heroes={displayedHeroes} isClicked={isClicked} setIsClicked={setIsClicked} />
+            <Home heroes={displayedHeroes} featuredHero={featuredHero} showHeroSpecs={showHeroSpecs} onHeroCardClick={handleHeroCardClick} />
           </Route>
           <Route exact path="/MYO">
             <MakeYourOwn onAddHero={handleAddHero} />

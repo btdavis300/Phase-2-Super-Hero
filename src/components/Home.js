@@ -1,14 +1,11 @@
 import React from "react";
 import HeroContainer from "./HeroContainer";
-import HeroSpecs from "./HeroSpecs"
+import HeroSpecs from "./HeroSpecs";
 
-const Home = ({ heroes, isClicked, setIsClicked }) => {
+const Home = ({ heroes, featuredHero, showHeroSpecs, onHeroCardClick }) => {
     return (
-        <div style={{
-            display: isClicked === true ? <HeroSpecs /> : <HeroContainer
-                heroes={heroes} />
-        }}>
-
+        <div>
+            {showHeroSpecs ? <HeroSpecs /> : <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />}
         </div>
     );
 };

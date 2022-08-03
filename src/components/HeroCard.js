@@ -6,10 +6,12 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroCard({ hero }) {
+function HeroCard({ hero, onHeroCardClick }) {
+
+
 
   function displayHero() {
-    console.log('show me the specs')
+    onHeroCardClick(hero)
   }
 
 
