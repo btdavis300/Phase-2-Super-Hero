@@ -7,9 +7,7 @@ import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
 function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
-  function displayHero() {
-    console.log(hero.images.sm);
-  }
+  function displayHero() {}
 
   function onFavorite(e) {
     e.stopPropagation();
