@@ -11,13 +11,12 @@ function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [favClicked, setFavClicked] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
       .then((heroData) => {
-        setHeroes(heroData.reverse());
+        setHeroes(heroData);
       });
   }, []);
 
@@ -65,7 +64,6 @@ function App() {
           </Route>
           <Route exact path="/sortby">
             <SortBy
-              isClicked={isClicked}
               heroes={heroes}
               setHeroes={setHeroes}
             />

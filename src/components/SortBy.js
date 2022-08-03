@@ -1,14 +1,18 @@
 import React from "react";
 import HeroCard from "./HeroCard";
 
-function SortBy({ heroes, setHeroes, isClicked }) {
-  // const [selectedCategory, setSelectedCategory] = useState();
-  const heroesArr = heroes.map((hero) => {
-    return <HeroCard key={hero.id} hero={hero} />;
-  });
+function SortBy({ heroes, setHeroes }) {
 
-  function onSort(event) {
-    const category = event.target.id;
+
+
+
+  const heroesArr = heroes.map((hero) => {
+    return <HeroCard key={hero.id} hero={hero} />
+  })
+
+  function onSort(e) {
+    const category = e.target.id
+    console.log(category)
     const sortedCategory = heroes.sort(function (a, b) {
       return b[category] - a[category];
     });
@@ -18,22 +22,25 @@ function SortBy({ heroes, setHeroes, isClicked }) {
   return (
     <div
       id="button-container"
-      style={{ display: isClicked === true ? "none" : "" }}
     >
-      <select>
-        <option id="gender" onClick={onSort}>
-          Sort by Gender
-        </option>
-        <option id="height" onClick={onSort}>
-          Sort by Height
-        </option>
-        <option id="weight" onClick={onSort}>
-          Sort by Weight
-        </option>
-        <option id="eye-color" onClick={onSort}>
-          Sort by Eye Color
-        </option>
-      </select>
+      <div>
+        <button id="intelligence" onClick={onSort}>
+          Sort by Intelligence
+        </button>
+        <button id="strength" onClick={onSort}>
+          Sort by Strength
+        </button>
+        <button id="speed" onClick={onSort}>
+          Sort by Speed
+        </button>
+        <button id="durability" onClick={onSort}>
+          Sort by Durability
+        </button>
+        <button id='power' onClick={onSort}> Sort By Power
+        </button>
+        <button id='combat' onClick={onSort}> Sort By Combat
+        </button>
+      </div>
       <div>{heroesArr}</div>
     </div>
   );

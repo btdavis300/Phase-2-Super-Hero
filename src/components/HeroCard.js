@@ -8,7 +8,6 @@ import strengthIcon from "../assets/strength.png";
 
 function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
   function displayHero() {
-    console.log(hero.images.sm);
   }
 
   function onFavorite(e) {
