@@ -65,7 +65,7 @@ function HeroCard({ hero, handleFavorites, favClicked, setFavClicked }) {
         </ul>
       </div>
       <img src={hero.images.sm} alt="" id="images"></img>
-      <button onClick={onFavorite}>
+      <button id="favorites-button" onClick={onFavorite}>
         {hero.favorite ? "Remove from Favorites" : "Add to Favorites"}
       </button>
     </div>

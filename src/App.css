@@ -164,3 +164,42 @@ ul {
   width: 15px;
   height: 15px;
 }
+
+#intelligence, #strength, #speed, #durability, #power, #combat {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+#intelligence:hover, #strength:hover, #speed:hover, #durability:hover, #power:hover, #combat:hover {
+  color: white;
+  background-color: black;
+}
+
+#favorites-button {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#favorites-button:hover {
+  color: white;
+  background-color: black;
+}
+
+#submit-button {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  color: white;
+  background-color: black;
+}
+
+#button-container {
+  display: block;
+}

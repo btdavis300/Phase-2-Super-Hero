@@ -25835,36 +25835,6 @@
         "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/731-zoom.jpg",
         "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/731-zoom.jpg"
       }
-    },
-    {
-      "name": "Zoom pt 2",
-      "images": {
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/731-zoom.jpg"
-      },
-      "powerstats": {
-        "intelligence": "100",
-        "strength": "100",
-        "speed": "100",
-        "durability": "100",
-        "power": "100",
-        "combat": "100"
-      },
-      "id": 732
-    },
-    {
-      "name": "AA",
-      "images": {
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/7-adam-monroe.jpg"
-      },
-      "powerstats": {
-        "intelligence": "11",
-        "strength": "111",
-        "speed": "1111",
-        "durability": "11111",
-        "power": "111111",
-        "combat": "11111111"
-      },
-      "id": 733
     }
   ]
 }

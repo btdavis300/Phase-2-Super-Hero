@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function HeroSpecs() {
-    return (
-        <div>HeroSpecs</div>
-    )
+  return <div>HeroSpecs</div>;
 }
 
-export default HeroSpecs
+export default HeroSpecs;
