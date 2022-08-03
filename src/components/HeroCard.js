@@ -7,17 +7,15 @@ import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
 function HeroCard({ hero, onHeroCardClick }) {
-
-
-
   function displayHero() {
-    onHeroCardClick(hero)
+    onHeroCardClick(hero);
   }
 
-
   return (
-    <div id="image-container" >
-      <h4 id="titles" onClick={displayHero}>{hero.name}</h4>
+    <div id="image-container">
+      <h4 id="titles" onClick={displayHero}>
+        {hero.name}
+      </h4>
       <div id="hero-powerstats">
         <ul>
           <li>
@@ -64,15 +62,8 @@ function HeroCard({ hero, onHeroCardClick }) {
           </li>
         </ul>
       </div>
-<<<<<<< HEAD
-      <img src={hero.images.sm} alt="" id="images"></img>
-      <button id="favorites-button" onClick={onFavorite}>
-        {hero.favorite ? "Remove from Favorites" : "Add to Favorites"}
-=======
       <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
-      <button> Add to Favorites
->>>>>>> kelan1
-      </button>
+      <button> Add to Favorites</button>
     </div>
   );
 }

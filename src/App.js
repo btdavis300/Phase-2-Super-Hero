@@ -10,8 +10,8 @@ import SortBy from "./components/SortBy.js";
 function App() {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [featuredHero, setFeaturedHero] = useState({})
-  const [showHeroSpecs, setShowHeroSpecs] = useState(false)
+  const [featuredHero, setFeaturedHero] = useState({});
+  const [showHeroSpecs, setShowHeroSpecs] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
@@ -25,21 +25,17 @@ function App() {
     return hero.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-
   function handleAddHero(newHero) {
     setHeroes([newHero, ...heroes]);
   }
 
-  function handleHeroCardClick(hero) {
-    console.log(featuredHero)
-    console.log(hero)
-    setFeaturedHero(featuredHero => !featuredHero)
-    setShowHeroSpecs({
-      name: hero.name,
-      images: {
-        lg: hero.images.lg,
-      }
-    })
+  function handleHeroCardClick(featuredHero) {
+    setFeaturedHero(featuredHero);
+    setShowHeroSpecs(true);
+  }
+
+  function handleGoBack() {
+    setShowHeroSpecs((showHeroSpecs) => !showHeroSpecs);
   }
 
   return (
@@ -48,21 +44,22 @@ function App() {
       <div id="nav">
         <Switch>
           <Route exact path="/">
-            <Home heroes={displayedHeroes} featuredHero={featuredHero} showHeroSpecs={showHeroSpecs} onHeroCardClick={handleHeroCardClick} />
+            <Home
+              heroes={displayedHeroes}
+              featuredHero={featuredHero}
+              showHeroSpecs={showHeroSpecs}
+              onHeroCardClick={handleHeroCardClick}
+              onGoBack={handleGoBack}
+            />
           </Route>
           <Route exact path="/MYO">
             <MakeYourOwn onAddHero={handleAddHero} />
           </Route>
           <Route exact path="/favorites">
-            <Favorites
-              heroes={heroes}
-            />
+            <Favorites heroes={heroes} />
           </Route>
           <Route exact path="/sortby">
-            <SortBy
-              heroes={heroes}
-              setHeroes={setHeroes}
-            />
+            <SortBy heroes={heroes} setHeroes={setHeroes} />
           </Route>
         </Switch>
       </div>

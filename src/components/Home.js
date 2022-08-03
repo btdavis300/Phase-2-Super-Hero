@@ -2,26 +2,26 @@ import React from "react";
 import HeroContainer from "./HeroContainer";
 import HeroSpecs from "./HeroSpecs";
 
-<<<<<<< HEAD
-const Home = ({ heroes, handleFavorites, favClicked, setFavClicked }) => {
+const Home = ({
+  heroes,
+  featuredHero,
+  showHeroSpecs,
+  onHeroCardClick,
+  onGoBack,
+}) => {
   return (
     <div>
-      <HeroContainer
-        heroes={heroes}
-        handleFavorites={handleFavorites}
-        favClicked={favClicked}
-        setFavClicked={setFavClicked}
-      />
+      {showHeroSpecs ? (
+        <HeroSpecs
+          featuredHero={featuredHero}
+          showHeroSpecs={showHeroSpecs}
+          onGoBack={onGoBack}
+        />
+      ) : (
+        <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />
+      )}
     </div>
   );
-=======
-const Home = ({ heroes, featuredHero, showHeroSpecs, onHeroCardClick }) => {
-    return (
-        <div>
-            {showHeroSpecs ? <HeroSpecs showHeroSpecs={showHeroSpecs} /> : <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />}
-        </div>
-    );
->>>>>>> kelan1
 };
 
 export default Home;

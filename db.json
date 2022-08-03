@@ -30280,6 +30280,21 @@
         "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/731-zoom.jpg",
         "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/731-zoom.jpg"
       }
+    },
+    {
+      "name": "some ramen",
+      "images": {
+        "sm": "https://cdn.5280.com/2022/01/UncleTokyo_RMM-960x720.jpg"
+      },
+      "powerstats": {
+        "intelligence": "1",
+        "strength": "1",
+        "speed": "1",
+        "durability": "1",
+        "power": "1",
+        "combat": "1"
+      },
+      "id": 732
     }
   ]
 }
