@@ -10,7 +10,7 @@ const Home = ({
   onGoBack,
 }) => {
   return (
-    <div>
+    <div id="deezboiz-container">
       {showHeroSpecs ? (
         <HeroSpecs
           featuredHero={featuredHero}
