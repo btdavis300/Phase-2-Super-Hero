@@ -169,7 +169,7 @@ ul {
   color: black;
   background-color: white;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 16px;
   margin-left: 10px;
 }
 
@@ -182,6 +182,7 @@ ul {
   color: black;
   background-color: white;
   cursor: pointer;
+  border-radius: 16px;
 }
 
 #favorites-button:hover {
