@@ -31,7 +31,15 @@ function App() {
   }
 
   function handleHeroCardClick(hero) {
-
+    console.log(featuredHero)
+    console.log(hero)
+    setFeaturedHero(featuredHero => !featuredHero)
+    setShowHeroSpecs({
+      name: hero.name,
+      images: {
+        lg: hero.images.lg,
+      }
+    })
   }
 
   return (

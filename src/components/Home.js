@@ -5,7 +5,7 @@ import HeroSpecs from "./HeroSpecs";
 const Home = ({ heroes, featuredHero, showHeroSpecs, onHeroCardClick }) => {
     return (
         <div>
-            {showHeroSpecs ? <HeroSpecs /> : <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />}
+            {showHeroSpecs ? <HeroSpecs showHeroSpecs={showHeroSpecs} /> : <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />}
         </div>
     );
 };

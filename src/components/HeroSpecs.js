@@ -1,8 +1,10 @@
 import React from 'react'
 
-function HeroSpecs() {
+function HeroSpecs({ showHeroSpecs }) {
     return (
-        <div>HeroSpecs</div>
+        <div>
+            <h1> {console.log(showHeroSpecs)} </h1>
+        </div>
     )
 }
 
