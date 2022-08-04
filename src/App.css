@@ -69,7 +69,7 @@
   border-radius: 35px;
   padding: 20px;
   cursor: pointer;
-  width: 160px;
+  width: 180px;
   height: 240px;
 }
 
@@ -272,7 +272,12 @@ font-size: 20px;
 
 #deezboiz-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left-specs, #right-specs{
+  display: flex;
 }
 
 #specs-images {
@@ -281,4 +286,5 @@ font-size: 20px;
 
 #specs-image-container {
   display: flex;
+  width: 100vw;
 }
