@@ -63,7 +63,7 @@ function App() {
             <Favorites heroes={heroes} />
           </Route>
           <Route exact path="/sortby">
-            <SortBy heroes={heroes} setHeroes={setHeroes} />
+            <SortBy heroes={displayedHeroes} setHeroes={setHeroes} />
           </Route>
         </Switch>
       </div>
