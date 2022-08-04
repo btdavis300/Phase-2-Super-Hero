@@ -30282,19 +30282,109 @@
       }
     },
     {
-      "name": "TEST",
+      "name": "Test name",
+      "images": {
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/30-ant-man.jpg"
+      },
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "1",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "id": 732
+    },
+    {
+      "name": "Test Bot",
+      "images": {
+        "sm": "90"
+      },
+      "powerstats": {
+        "intelligence": "90",
+        "strength": "90",
+        "speed": "90",
+        "durability": "90",
+        "power": "90",
+        "combat": "90"
+      },
+      "id": 733
+    },
+    {
+      "name": "test3",
+      "images": {
+        "sm": "90"
+      },
+      "powerstats": {
+        "intelligence": "90",
+        "strength": "098",
+        "speed": "89",
+        "durability": "2",
+        "power": "8908",
+        "combat": "890"
+      },
+      "id": 734
+    },
+    {
+      "name": "test 4",
+      "images": {
+        "sm": "789"
+      },
+      "powerstats": {
+        "intelligence": "789",
+        "strength": "789",
+        "speed": "789",
+        "durability": "789",
+        "power": "798",
+        "combat": "789"
+      },
+      "id": 735
+    },
+    {
+      "name": "test9",
+      "images": {
+        "sm": "7890p"
+      },
+      "powerstats": {
+        "intelligence": "890",
+        "strength": "7980",
+        "speed": "7890",
+        "durability": "890",
+        "power": "8790",
+        "combat": "890"
+      },
+      "id": 736
+    },
+    {
+      "name": "test890",
+      "images": {
+        "sm": "890"
+      },
+      "powerstats": {
+        "intelligence": "890",
+        "strength": "890",
+        "speed": "890",
+        "durability": "890",
+        "power": "890",
+        "combat": "890"
+      },
+      "id": 737
+    },
+    {
+      "name": "some ramen",
       "images": {
         "sm": "https://www.servingdumplings.com/wp-content/uploads/2020/11/ramen-with-miso-roasted-pumpkin-2-97fb11ab.jpg"
       },
       "powerstats": {
-        "intelligence": "80",
-        "strength": "80",
-        "speed": "80",
-        "durability": "80",
-        "power": "80",
-        "combat": "80"
+        "intelligence": "432",
+        "strength": "234",
+        "speed": "243",
+        "durability": "234",
+        "power": "234",
+        "combat": "234"
       },
-      "id": 732
+      "id": 738
     }
   ],
   "favorites": [
@@ -30676,6 +30766,94 @@
         "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/60-bane.jpg",
         "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/60-bane.jpg"
       },
+      "favorite": true
+    },
+    {
+      "id": 10,
+      "name": "Agent Bob",
+      "slug": "10-agent-bob",
+      "powerstats": {
+        "intelligence": 10,
+        "strength": 8,
+        "speed": 13,
+        "durability": 5,
+        "power": 5,
+        "combat": 20
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": [
+          "5'10",
+          "178 cm"
+        ],
+        "weight": [
+          "181 lb",
+          "81 kg"
+        ],
+        "eyeColor": "Brown",
+        "hairColor": "Brown"
+      },
+      "biography": {
+        "fullName": "Bob",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Bob",
+          "agent of Hydra",
+          "Bob",
+          "agent of A.I.M"
+        ],
+        "placeOfBirth": "-",
+        "firstAppearance": "Cable & Deadpool #38 (May, 2007)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "Mercenary, janitor; former pirate, terrorist",
+        "base": "Mobile; formerly Manhattan, Hellcarrier"
+      },
+      "connections": {
+        "groupAffiliation": "A.I.M., Deadpool; formerly Agency X, Hydra",
+        "relatives": "Allison (ex-wife); Terry and Howie (sons)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/10-agent-bob.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/10-agent-bob.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/10-agent-bob.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/10-agent-bob.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "name": "Test name",
+      "images": {
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/30-ant-man.jpg"
+      },
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "1",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "id": 732,
+      "favorite": true
+    },
+    {
+      "name": "Test Bot",
+      "images": {
+        "sm": "90"
+      },
+      "powerstats": {
+        "intelligence": "90",
+        "strength": "90",
+        "speed": "90",
+        "durability": "90",
+        "power": "90",
+        "combat": "90"
+      },
+      "id": 733,
       "favorite": true
     }
   ]

@@ -13,12 +13,14 @@ function App() {
   const [featuredHero, setFeaturedHero] = useState({});
   const [showHeroSpecs, setShowHeroSpecs] = useState(false);
   const [favHeroes, setFavHeroes] = useState([]);
+  const [MYOHeroes, setMYOHeroes] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
       .then((heroData) => {
         setHeroes(heroData);
+        setMYOHeroes(heroData);
       });
   }, []);
 
@@ -47,6 +49,10 @@ function App() {
     setShowHeroSpecs((showHeroSpecs) => !showHeroSpecs);
   }
 
+  function handleMYOHeroes(MYOHero) {
+    setMYOHeroes([...MYOHeroes, MYOHero]);
+  }
+
   function handleFavorites(clickedHero) {
     const favHeroIndex = favHeroes.findIndex(
       (hero) => hero.id === clickedHero.id
@@ -64,7 +70,7 @@ function App() {
         .then(setFavHeroes([...favHeroes, clickedHero]));
       console.log(favHeroes);
     } else {
-      alert(clickedHero.name + "is already in your Favorites");
+      alert(clickedHero.name + " is already in your Favorites");
     }
   }
 
@@ -98,7 +104,12 @@ function App() {
             />
           </Route>
           <Route exact path="/MYO">
-            <MakeYourOwn onAddHero={handleAddHero} />
+            <MakeYourOwn
+              onAddHero={handleAddHero}
+              MYOHeroes={MYOHeroes}
+              onFavoriteHero={handleFavorites}
+              onMYOHeroes={handleMYOHeroes}
+            />
           </Route>
           <Route exact path="/favorites">
             <Favorites

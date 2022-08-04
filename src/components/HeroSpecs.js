@@ -6,7 +6,11 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack }) {
+function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack, onFavoriteHero }) {
+  function clickedFavorites() {
+    onFavoriteHero(featuredHero);
+  }
+
   return (
     <div id="specs-image-container">
       <h4 id="specs-titles">{featuredHero.name}</h4>
@@ -142,7 +146,9 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack }) {
         </div>
       </div>
       <div id="buttons-div">
-        <button id="specs-favs">Add to Favorites</button>
+        <button id="specs-favs" onClick={clickedFavorites}>
+          Add to Favorites
+        </button>
         <button id="specs-back" onClick={onGoBack}>
           Back to Collection
         </button>

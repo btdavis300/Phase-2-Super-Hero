@@ -17,6 +17,7 @@ const Home = ({
           featuredHero={featuredHero}
           showHeroSpecs={showHeroSpecs}
           onGoBack={onGoBack}
+          onFavoriteHero={onFavoriteHero}
         />
       ) : (
         <HeroContainer
