@@ -11,6 +11,9 @@ function MakeYourOwn({ onAddHero, MYOHeroes, onFavoriteHero, onMYOHeroes }) {
   const [power, setPower] = useState("");
   const [combat, setCombat] = useState("");
 
+
+
+
   const filteredMYOHeroes = MYOHeroes.filter((hero) => hero.id >= 732);
   const displayMYOHeroes = filteredMYOHeroes.map((hero) => {
     return (
@@ -108,6 +111,7 @@ function MakeYourOwn({ onAddHero, MYOHeroes, onFavoriteHero, onMYOHeroes }) {
         <button id="submit-button" type="submit">
           Add New Hero
         </button>
+
       </form>
       <div id="image-field">{displayMYOHeroes}</div>
     </div>
