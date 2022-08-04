@@ -30280,6 +30280,51 @@
         "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/731-zoom.jpg",
         "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/731-zoom.jpg"
       }
+    },
+    {
+      "name": "Darth Revan",
+      "images": {
+        "sm": "https://i.etsystatic.com/17280842/r/il/21f55d/1822183088/il_570xN.1822183088_hssp.jpg"
+      },
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "200",
+        "speed": "75",
+        "durability": "60",
+        "power": "85",
+        "combat": "100"
+      },
+      "id": 732
+    },
+    {
+      "name": "Darth Sion",
+      "images": {
+        "sm": "https://www.gamespot.com/a/uploads/original/gamespot/images/2005/030/reviews/637372-920601_20050131_002.jpg"
+      },
+      "powerstats": {
+        "intelligence": "60",
+        "strength": "85",
+        "speed": "70",
+        "durability": "20",
+        "power": "65",
+        "combat": "90"
+      },
+      "id": 733
+    },
+    {
+      "name": "Lydia",
+      "images": {
+        "sm": "https://qph.cf2.quoracdn.net/main-qimg-fcbb3a3af4e93254f7513abbafb54adf-lq"
+      },
+      "powerstats": {
+        "intelligence": "40",
+        "strength": "92",
+        "speed": "55",
+        "durability": "70",
+        "power": "80",
+        "combat": "70"
+      },
+      "id": 734
     }
   ],
   "favorites": [
@@ -30720,19 +30765,35 @@
       "favorite": true
     },
     {
-      "name": "Test name",
+      "name": "Darth Sion",
       "images": {
-        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/30-ant-man.jpg"
+        "sm": "https://www.gamespot.com/a/uploads/original/gamespot/images/2005/030/reviews/637372-920601_20050131_002.jpg"
       },
       "powerstats": {
-        "intelligence": "100",
-        "strength": "1",
-        "speed": "100",
-        "durability": "100",
-        "power": "100",
-        "combat": "100"
+        "intelligence": "60",
+        "strength": "85",
+        "speed": "70",
+        "durability": "20",
+        "power": "65",
+        "combat": "90"
       },
-      "id": 732,
+      "id": 733,
+      "favorite": true
+    },
+    {
+      "name": "Lydia",
+      "images": {
+        "sm": "https://qph.cf2.quoracdn.net/main-qimg-fcbb3a3af4e93254f7513abbafb54adf-lq"
+      },
+      "powerstats": {
+        "intelligence": "40",
+        "strength": "92",
+        "speed": "55",
+        "durability": "70",
+        "power": "80",
+        "combat": "70"
+      },
+      "id": 734,
       "favorite": true
     }
   ]
