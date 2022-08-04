@@ -158,67 +158,66 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack, onFavoriteHero }) {
 
   return (
     <>
+      <h1 className="page-title">HERO DETAILS</h1>
       <div id="specs-image-container">
         <div id="left-specs">
           <h4 id="specs-titles">{featuredHero.name}</h4>
           <img src={featuredHero.images.lg} alt="" id="specs-images"></img>
 
           <div id="featuredHero-powerstats">
-            <ul>
-              <li>
-                {" "}
-                <img
-                  className="stats-icons"
-                  src={intelligenceIcon}
-                  alt="intelligence"
-                />{" "}
-                {featuredHero.powerstats.intelligence}{" "}
-              </li>
-              <li>
-                {" "}
-                <img
-                  className="stats-icons"
-                  src={strengthIcon}
-                  alt="strength"
-                />{" "}
-                {featuredHero.powerstats.strength}{" "}
-              </li>
-              <li>
-                {" "}
-                <img className="stats-icons" src={speedIcon} alt="speed" />{" "}
-                {featuredHero.powerstats.speed}{" "}
-              </li>
-              <li>
-                {" "}
-                <img
-                  className="stats-icons"
-                  src={durabilityIcon}
-                  alt="durability"
-                />{" "}
-                {featuredHero.powerstats.durability}{" "}
-              </li>
-              <li>
-                {" "}
-                <img className="stats-icons" src={powerIcon} alt="power" />{" "}
-                {featuredHero.powerstats.power}{" "}
-              </li>
-              <li>
-                {" "}
-                <img
-                  className="stats-icons"
-                  src={combatIcon}
-                  alt="combat"
-                />{" "}
-                {featuredHero.powerstats.combat}{" "}
-              </li>
-            </ul>
+            <span className="specs-stats-icons">
+              {" "}
+              <img
+                className="stats-icons"
+                src={intelligenceIcon}
+                alt="intelligence"
+              />{" "}
+              Intelligence:
+              {featuredHero.powerstats.intelligence}
+            </span>
+            <span className="specs-stats-icons">
+              {" "}
+              <img
+                className="stats-icons"
+                src={strengthIcon}
+                alt="strength"
+              />{" "}
+              Strength:
+              {featuredHero.powerstats.strength}{" "}
+            </span>
+            <span className="specs-stats-icons">
+              {" "}
+              <img className="stats-icons" src={speedIcon} alt="speed" /> Speed:
+              {featuredHero.powerstats.speed}{" "}
+            </span>
+            <span className="specs-stats-icons">
+              {" "}
+              <img
+                className="stats-icons"
+                src={durabilityIcon}
+                alt="durability"
+              />{" "}
+              Durability:
+              {featuredHero.powerstats.durability}{" "}
+            </span>
+            <span className="specs-stats-icons">
+              {" "}
+              <img className="stats-icons" src={powerIcon} alt="power" /> Power:
+              {featuredHero.powerstats.power}{" "}
+            </span>
+            <span className="specs-stats-icons">
+              {" "}
+              <img className="stats-icons" src={combatIcon} alt="combat" />{" "}
+              Combat:
+              {featuredHero.powerstats.combat}{" "}
+            </span>
           </div>
         </div>
 
         <div id="right-specs">
           <div id="biography-div">
             <div>
-              <strong> - BIOGRAPHY - </strong>
+              <strong className="right-specs-titles"> - BIOGRAPHY - </strong>
               <br></br>
               <strong>Full Name: </strong>
               {featuredHero.biography.fullName}
@@ -251,7 +250,7 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack, onFavoriteHero }) {
 
           <div id="appearance-div">
             <div>
-              <strong> - APPEARANCE - </strong>
+              <strong className="right-specs-titles"> - APPEARANCE - </strong>
               <br></br>
               <strong>Gender: </strong>
               {featuredHero.appearance.gender}
@@ -280,7 +279,7 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack, onFavoriteHero }) {
 
           <div id="work-div">
             <div>
-              <strong> - WORK - </strong>
+              <strong className="right-specs-titles"> - WORK - </strong>
               <br></br>
               <strong>Occupation: </strong>
               {featuredHero.work.occupation}
@@ -292,7 +291,7 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack, onFavoriteHero }) {
           </div>
           <div id="connections-div">
             <div>
-              <strong> - CONNECTIONS - </strong>
+              <strong className="right-specs-titles"> - CONNECTIONS - </strong>
               <br></br>
               <strong>Group Affiliation: </strong>
               {featuredHero.connections.groupAffiliation}
