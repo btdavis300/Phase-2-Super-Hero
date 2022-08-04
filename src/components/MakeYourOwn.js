@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import HeroCard from "./HeroCard";
 
-function MakeYourOwn({ onAddHero }) {
+function MakeYourOwn({ onAddHero, MYOHeroes, onFavoriteHero, onMYOHeroes }) {
   const [name, setName] = useState("");
   const [sm, setSm] = useState("");
   const [intelligence, setIntelligence] = useState("");
@@ -10,35 +11,43 @@ function MakeYourOwn({ onAddHero }) {
   const [power, setPower] = useState("");
   const [combat, setCombat] = useState("");
 
+  const filteredMYOHeroes = MYOHeroes.filter((hero) => hero.id >= 732);
+  const displayMYOHeroes = filteredMYOHeroes.map((hero) => {
+    return (
+      <HeroCard key={hero.id} hero={hero} onFavoriteHero={onFavoriteHero} />
+    );
+  });
+
   function handleSubmit(e) {
-    e.preventDefault();
+    const newMYOHero = {
+      name: name,
+      images: {
+        sm: sm,
+      },
+      powerstats: {
+        intelligence: intelligence,
+        strength: strength,
+        speed: speed,
+        durability: durability,
+        power: power,
+        combat: combat,
+      },
+    };
     fetch("http://localhost:3000/superheroes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: name,
-        images: {
-          sm: sm,
-        },
-        powerstats: {
-          intelligence: intelligence,
-          strength: strength,
-          speed: speed,
-          durability: durability,
-          power: power,
-          combat: combat,
-        },
-      }),
+      body: JSON.stringify(newMYOHero),
     })
       .then((res) => res.json())
       .then((newHero) => onAddHero(newHero));
+    onMYOHeroes(newMYOHero);
   }
 
   return (
     <div className="new-bot-form">
-      <h2>- Create Your Own Hero! -</h2>
+      <h2 id="create-your-own">- Create Your Own Hero! -</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -100,6 +109,7 @@ function MakeYourOwn({ onAddHero }) {
           Add New Hero
         </button>
       </form>
+      <div id="image-field">{displayMYOHeroes}</div>
     </div>
   );
 }

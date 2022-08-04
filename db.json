@@ -25836,5 +25836,440 @@
         "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/731-zoom.jpg"
       }
     }
+  ],
+  "favorites": [
+    {
+      "id": 69,
+      "name": "Batman",
+      "slug": "69-batman",
+      "powerstats": {
+        "intelligence": 81,
+        "strength": 40,
+        "speed": 29,
+        "durability": 55,
+        "power": 63,
+        "combat": 90
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["5'10", "178 cm"],
+        "weight": ["170 lb", "77 kg"],
+        "eyeColor": "Blue",
+        "hairColor": "Black"
+      },
+      "biography": {
+        "fullName": "Terry McGinnis",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Batman II",
+          "The Tomorrow Knight",
+          "The second Dark Knight",
+          "The Dark Knight of Tomorrow",
+          "Batman Beyond"
+        ],
+        "placeOfBirth": "Gotham City, 25th Century",
+        "firstAppearance": "Batman Beyond #1",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "21st Century Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "Batman Family, Justice League Unlimited",
+        "relatives": "Bruce Wayne (biological father), Warren McGinnis (father, deceased), Mary McGinnis (mother), Matt McGinnis (brother)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/69-batman.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/69-batman.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/69-batman.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/69-batman.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 68,
+      "name": "Batgirl VI",
+      "slug": "68-batgirl-vi",
+      "powerstats": {
+        "intelligence": 75,
+        "strength": 10,
+        "speed": 23,
+        "durability": 28,
+        "power": 22,
+        "combat": 80
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": null,
+        "height": ["5'6", "168 cm"],
+        "weight": ["135 lb", "61 kg"],
+        "eyeColor": "Blue",
+        "hairColor": "Blond"
+      },
+      "biography": {
+        "fullName": "Stephanie Brown",
+        "alterEgos": "Spoiler",
+        "aliases": ["Steph", "Robin", "Marion Todd", "Spoiler"],
+        "placeOfBirth": "-",
+        "firstAppearance": "Detective Comics #647. As Batgirl in Batgirl (Volume 3) #1. (2009)",
+        "publisher": "Spoiler",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "College student at Gotham University",
+        "base": "Gotham Heights, Gotham City"
+      },
+      "connections": {
+        "groupAffiliation": "The Batman Family, formerly the Birds of Prey, Tim Drake (on-and-off boyfriend)",
+        "relatives": "Arthur Brown (The Cluemaster, father), Crystal Brown (mother), unnamed daughter (given up for adoption)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/68-batgirl-vi.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/68-batgirl-vi.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/68-batgirl-vi.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/68-batgirl-vi.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 66,
+      "name": "Batgirl IV",
+      "slug": "66-batgirl-iv",
+      "powerstats": {
+        "intelligence": 69,
+        "strength": 12,
+        "speed": 27,
+        "durability": 56,
+        "power": 46,
+        "combat": 100
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": ["5'5", "165 cm"],
+        "weight": ["115 lb", "52 kg"],
+        "eyeColor": "Green",
+        "hairColor": "Black"
+      },
+      "biography": {
+        "fullName": "Cassandra Cain",
+        "alterEgos": "No alter egos found.",
+        "aliases": ["Kasumi", "various mundane persona,"],
+        "placeOfBirth": "League of Assassins (exact base is unknown)",
+        "firstAppearance": "Batman: Legends of the Dark Knight #120",
+        "publisher": "DC Comics",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "Gotham City; Bl?dhaven; Tibet; New York City"
+      },
+      "connections": {
+        "groupAffiliation": "Titans East, League of Assassins, Batman Family, Justice League Elite, Young Justice",
+        "relatives": "David Cain (father), Lady Shiva (mother), Carolyn (aunt, deceased), Annalea (sibling, deceased), 'The Mad Dog' (sibling)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/66-batgirl-iv.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/66-batgirl-iv.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/66-batgirl-iv.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/66-batgirl-iv.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 63,
+      "name": "Batgirl",
+      "slug": "63-batgirl",
+      "powerstats": {
+        "intelligence": 88,
+        "strength": 11,
+        "speed": 33,
+        "durability": 40,
+        "power": 34,
+        "combat": 90
+      },
+      "appearance": {
+        "gender": "Female",
+        "race": "Human",
+        "height": ["5'7", "170 cm"],
+        "weight": ["126 lb", "57 kg"],
+        "eyeColor": "Green",
+        "hairColor": "Red"
+      },
+      "biography": {
+        "fullName": "Barbara Gordon",
+        "alterEgos": "Oracle",
+        "aliases": ["Oracle", "Bluebelle"],
+        "placeOfBirth": "-",
+        "firstAppearance": "Detective Comics #359",
+        "publisher": "Oracle",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "Gotham City, formerly Metropolis, Platinum Flats"
+      },
+      "connections": {
+        "groupAffiliation": "-",
+        "relatives": "James Gordon (father) ? Barbara Eileen (mother) ? James Gordon, Jr. (brother)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/63-batgirl.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/63-batgirl.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/63-batgirl.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/63-batgirl.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 62,
+      "name": "Bantam",
+      "slug": "62-bantam",
+      "powerstats": {
+        "intelligence": 25,
+        "strength": 53,
+        "speed": 23,
+        "durability": 54,
+        "power": 21,
+        "combat": 56
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": null,
+        "height": ["5'5", "165 cm"],
+        "weight": ["119 lb", "54 kg"],
+        "eyeColor": "Brown",
+        "hairColor": "Black"
+      },
+      "biography": {
+        "fullName": "Roberto Velasquez",
+        "alterEgos": "No alter egos found.",
+        "aliases": ["-"],
+        "placeOfBirth": "-",
+        "firstAppearance": "Civil War: Front Line #3 (September, 2006)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "Adventurer, boxing trainer, former boxer",
+        "base": "-"
+      },
+      "connections": {
+        "groupAffiliation": "Captain America, Pro-Registration forces",
+        "relatives": "-"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/62-bantam.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/62-bantam.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/62-bantam.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/62-bantam.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 61,
+      "name": "Banshee",
+      "slug": "61-banshee",
+      "powerstats": {
+        "intelligence": 50,
+        "strength": 10,
+        "speed": 58,
+        "durability": 40,
+        "power": 63,
+        "combat": 70
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["6'0", "183 cm"],
+        "weight": ["170 lb", "77 kg"],
+        "eyeColor": "Green",
+        "hairColor": "Strawberry Blond"
+      },
+      "biography": {
+        "fullName": "Sean Cassidy",
+        "alterEgos": "No alter egos found.",
+        "aliases": ["Death"],
+        "placeOfBirth": "Cassidy Keep, Ireland",
+        "firstAppearance": "X-Men #28 (January, 1967)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "Currently founder and director of operation for X-Corps, formerly Adventurer and Headmaster at the Massachusetts Academy, in charge of Generation X, Interpol Inspector and Agent, freelance detective, professional criminal, involuntary operative for Factor",
+        "base": "Muir Island, off the coast of Scotland. formerly Massachusetts Academy; Xavier Institute"
+      },
+      "connections": {
+        "groupAffiliation": "Currently X-Corps, formerly Generation X, Factor Three, X-Men",
+        "relatives": "Maeve Rourke Cassidy (wife, deceased), Thomas (Black Tom, cousin), Theresa Rourke (Siryn, daughter)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/61-banshee.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/61-banshee.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/61-banshee.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/61-banshee.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 60,
+      "name": "Bane",
+      "slug": "60-bane",
+      "powerstats": {
+        "intelligence": 88,
+        "strength": 38,
+        "speed": 23,
+        "durability": 56,
+        "power": 51,
+        "combat": 95
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["6'8", "203 cm"],
+        "weight": ["400 lb", "180 kg"],
+        "eyeColor": "-",
+        "hairColor": "-"
+      },
+      "biography": {
+        "fullName": "",
+        "alterEgos": "No alter egos found.",
+        "aliases": ["-"],
+        "placeOfBirth": "-",
+        "firstAppearance": "Batman: Vengeance of Bane #1 (January, 1993)",
+        "publisher": "DC Comics",
+        "alignment": "bad"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "Santa Prisca"
+      },
+      "connections": {
+        "groupAffiliation": "Suicide Squad, The Secret Society of Super Villains",
+        "relatives": "King Snake (father)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/60-bane.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/60-bane.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/60-bane.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/60-bane.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "id": 10,
+      "name": "Agent Bob",
+      "slug": "10-agent-bob",
+      "powerstats": {
+        "intelligence": 10,
+        "strength": 8,
+        "speed": 13,
+        "durability": 5,
+        "power": 5,
+        "combat": 20
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Human",
+        "height": ["5'10", "178 cm"],
+        "weight": ["181 lb", "81 kg"],
+        "eyeColor": "Brown",
+        "hairColor": "Brown"
+      },
+      "biography": {
+        "fullName": "Bob",
+        "alterEgos": "No alter egos found.",
+        "aliases": ["Bob", "agent of Hydra", "Bob", "agent of A.I.M"],
+        "placeOfBirth": "-",
+        "firstAppearance": "Cable & Deadpool #38 (May, 2007)",
+        "publisher": "Marvel Comics",
+        "alignment": "good"
+      },
+      "work": {
+        "occupation": "Mercenary, janitor; former pirate, terrorist",
+        "base": "Mobile; formerly Manhattan, Hellcarrier"
+      },
+      "connections": {
+        "groupAffiliation": "A.I.M., Deadpool; formerly Agency X, Hydra",
+        "relatives": "Allison (ex-wife); Terry and Howie (sons)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/10-agent-bob.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/10-agent-bob.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/10-agent-bob.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/10-agent-bob.jpg"
+      },
+      "favorite": true
+    },
+    {
+      "name": "Test name",
+      "images": {
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/30-ant-man.jpg"
+      },
+      "powerstats": {
+        "intelligence": "100",
+        "strength": "1",
+        "speed": "100",
+        "durability": "100",
+        "power": "100",
+        "combat": "100"
+      },
+      "id": 732,
+      "favorite": true
+    },
+    {
+      "id": 583,
+      "name": "Sentry",
+      "slug": "583-sentry",
+      "powerstats": {
+        "intelligence": 75,
+        "strength": 100,
+        "speed": 100,
+        "durability": 84,
+        "power": 100,
+        "combat": 40
+      },
+      "appearance": {
+        "gender": "Male",
+        "race": "Mutant",
+        "height": ["6'2", "188 cm"],
+        "weight": ["194 lb", "87 kg"],
+        "eyeColor": "Blue",
+        "hairColor": "Blond"
+      },
+      "biography": {
+        "fullName": "Robert Reynolds",
+        "alterEgos": "No alter egos found.",
+        "aliases": [
+          "Void",
+          "Bob",
+          "Golden Guardian of Good",
+          "John Victor Williams",
+          "Scout"
+        ],
+        "placeOfBirth": "-",
+        "firstAppearance": "Sentry #1 (September, 2000)",
+        "publisher": "Marvel Comics",
+        "alignment": "neutral"
+      },
+      "work": {
+        "occupation": "-",
+        "base": "The Watchtower (on top of Stark Tower, where it was formerly located before all memory of him disappeared)"
+      },
+      "connections": {
+        "groupAffiliation": "Formerly Horsemen of Death, Osborn's Avengers, Mighty Avengers, New Avengers, partner of Scout",
+        "relatives": "Lindy Reynolds (wife, deceased), Mrs. Reynolds (mother)"
+      },
+      "images": {
+        "xs": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/583-sentry.jpg",
+        "sm": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/583-sentry.jpg",
+        "md": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/583-sentry.jpg",
+        "lg": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/583-sentry.jpg"
+      },
+      "favorite": true
+    }
   ]
 }

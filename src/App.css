@@ -44,6 +44,10 @@
 
 #image-container {
   display: inline-block;
+  border: solid black;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  margin-left: 16px;
 }
 
 #titles {
@@ -53,7 +57,7 @@
   cursor: pointer;
   color: black;
   background-color: white;
-  padding-top: 50px;
+  padding-top: 10px;
   display: inline-block;
 }
 
@@ -63,8 +67,20 @@
 
 #images {
   border-radius: 35px;
-  margin: 20px;
+  padding: 20px;
   cursor: pointer;
+  width: 180px;
+  height: 240px;
+}
+
+#image-background{
+  background-color: rgba(169, 169, 169, 0.5);
+  margin-bottom: 10px;
+}
+
+#favorite-image-background{
+  background-color: rgba(255, 107, 107, 0.5);
+  margin-bottom: 10px;
 }
 
 /* #search-title {
@@ -197,6 +213,7 @@ ul {
   color: black;
   background-color: white;
   cursor: pointer;
+  border-radius: 16px;
 }
 
 #submit-button:hover {
@@ -207,6 +224,12 @@ ul {
 #button-container {
   display: block;
   text-align: center;
+  margin: 15px;
+  margin-top: 50px;
+}
+
+.sort-button {
+font-size: 20px;
 }
 
 #specs-favs {
@@ -238,6 +261,8 @@ ul {
   background-color: white;
   cursor: pointer;
   border-radius: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 #add-to-favs:hover {
@@ -246,8 +271,13 @@ ul {
 }
 
 #deezboiz-container {
-  display: grid;
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left-specs, #right-specs{
+  display: flex;
 }
 
 #specs-images {
@@ -255,16 +285,6 @@ ul {
 }
 
 #specs-image-container {
-  display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        'specs-titles biography-div'
-        'specs-images biography-div'
-        'specs-images appearance-div'
-        'featuredHero-powerstats buttons-div';
-    margin: 50px 0 0 0;
-    height: 400px;
-    width: 800px;
-    justify-items: center;
+  display: flex;
+  width: 100vw;
 }
