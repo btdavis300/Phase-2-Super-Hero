@@ -38,7 +38,7 @@ function MakeYourOwn({ onAddHero }) {
 
   return (
     <div className="new-bot-form">
-      <h2>- Create Your Own Hero! -</h2>
+      <h2 id="create-your-own">- Create Your Own Hero! -</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

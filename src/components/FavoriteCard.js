@@ -17,6 +17,14 @@ function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
 
   return (
     <div id="image-container">
+      <div id="favorite-image-background">
+        <img
+          src={hero.images.sm}
+          alt=""
+          id="images"
+          onClick={displayHero}
+        ></img>
+      </div>
       <h4 id="titles" onClick={displayHero}>
         {hero.name}
       </h4>
@@ -67,7 +75,6 @@ function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
           </span>
         </div>
       </div>
-      <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
       <div>
         <button onClick={clickedRemove} id="add-to-favs">
           Remove from Favorites

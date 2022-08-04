@@ -17,6 +17,14 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
 
   return (
     <div id="image-container">
+      <div id="image-background">
+        <img
+          src={hero.images.sm}
+          alt=""
+          id="images"
+          onClick={displayHero}
+        ></img>
+      </div>
       <h4 id="titles" onClick={displayHero}>
         {hero.name}
       </h4>
@@ -67,7 +75,6 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
           </span>
         </div>
       </div>
-      <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
       <div>
         <button onClick={clickedFavorites} id="add-to-favs">
           Add to Favorites
