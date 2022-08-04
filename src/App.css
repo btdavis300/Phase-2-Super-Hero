@@ -73,12 +73,12 @@
   height: 240px;
 }
 
-#image-background{
+#image-background {
   background-color: rgba(169, 169, 169, 0.5);
   margin-bottom: 10px;
 }
 
-#favorite-image-background{
+#favorite-image-background {
   background-color: rgba(255, 107, 107, 0.5);
   margin-bottom: 10px;
 }
@@ -109,7 +109,9 @@
 
 .topnav {
   overflow: hidden;
-  background-color: darkgrey
+  background-color: darkgrey;
+  position: sticky;
+  top: 0;
 }
 
 .topnav a {
@@ -184,12 +186,17 @@ ul {
   height: 15px;
 }
 
-.specs-stats-icons{
+.specs-stats-icons {
   display: flex;
   align-items: center;
 }
 
-#intelligence, #strength, #speed, #durability, #power, #combat {
+#intelligence,
+#strength,
+#speed,
+#durability,
+#power,
+#combat {
   color: black;
   background-color: white;
   cursor: pointer;
@@ -197,7 +204,12 @@ ul {
   margin-left: 10px;
 }
 
-#intelligence:hover, #strength:hover, #speed:hover, #durability:hover, #power:hover, #combat:hover {
+#intelligence:hover,
+#strength:hover,
+#speed:hover,
+#durability:hover,
+#power:hover,
+#combat:hover {
   color: white;
   background-color: black;
 }
@@ -234,7 +246,7 @@ ul {
 }
 
 .sort-button {
-font-size: 20px;
+  font-size: 20px;
 }
 
 #specs-favs {
@@ -281,16 +293,17 @@ font-size: 20px;
   align-items: center;
 }
 
-#left-specs, #right-specs{
+#left-specs,
+#right-specs {
   display: flex;
   flex-direction: column;
 }
 
-#left-specs{
+#left-specs {
   align-items: center;
 }
 
-#right-specs{
+#right-specs {
   justify-content: center;
 }
 
@@ -309,7 +322,7 @@ font-size: 20px;
   margin-top: 50px;
 }
 
-#specs-titles{
+#specs-titles {
   font-size: 42px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: oblique;
@@ -318,30 +331,30 @@ font-size: 20px;
   justify-content: center;
 }
 
-#featuredHero-powerstats{
+#featuredHero-powerstats {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: 50px;
 }
 
-.right-specs-titles{
+.right-specs-titles {
   display: flex;
   justify-content: center;
 }
 
-.page-title{
+.page-title {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-top: 50px
 }
 
-#favorite-container{
+#favorite-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#sorting-container{
+#sorting-container {
   display: flex;
   flex-direction: column;
   align-items: center;
