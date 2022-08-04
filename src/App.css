@@ -184,6 +184,11 @@ ul {
   height: 15px;
 }
 
+.specs-stats-icons{
+  display: flex;
+  align-items: center;
+}
+
 #intelligence, #strength, #speed, #durability, #power, #combat {
   color: black;
   background-color: white;
@@ -278,13 +283,66 @@ font-size: 20px;
 
 #left-specs, #right-specs{
   display: flex;
+  flex-direction: column;
+}
+
+#left-specs{
+  align-items: center;
+}
+
+#right-specs{
+  justify-content: center;
 }
 
 #specs-images {
+  display: flex;
+  justify-content: center;
   border-radius: 50px;
+  width: 75%;
+  margin-bottom: 30px;
 }
 
 #specs-image-container {
   display: flex;
   width: 100vw;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+#specs-titles{
+  font-size: 42px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+#featuredHero-powerstats{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.right-specs-titles{
+  display: flex;
+  justify-content: center;
+}
+
+.page-title{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 50px
+}
+
+#favorite-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sorting-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

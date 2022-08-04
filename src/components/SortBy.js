@@ -29,53 +29,58 @@ function SortBy({ heroes, setHeroes }) {
 
   //BUTTONS
   return (
-    <div id="button-container">
-      <button
-        className="sort-button"
-        id="intelligence"
-        onClick={(e) => onSort(e, "intelligence", intelOrder, setIntelOrder)}
-      >
-        Sort by Intelligence
-      </button>
-      <button
-        className="sort-button"
-        id="strength"
-        onClick={(e) => onSort(e, "strength", strengthOrder, setStrengthOrder)}
-      >
-        Sort by Strength
-      </button>
-      <button
-        className="sort-button"
-        id="speed"
-        onClick={(e) => onSort(e, "speed", speedOrder, setSpeedOrder)}
-      >
-        Sort by Speed
-      </button>
-      <button
-        className="sort-button"
-        id="durability"
-        onClick={(e) =>
-          onSort(e, "durability", durabilityOrder, setDurabilityOrder)
-        }
-      >
-        Sort by Durability
-      </button>
-      <button
-        className="sort-button"
-        id="power"
-        onClick={(e) => onSort(e, "power", powerOrder, setPowerOrder)}
-      >
-        Sort by Power
-      </button>
-      <button
-        className="sort-button"
-        id="combat"
-        onClick={(e) => onSort(e, "combat", combatOrder, setCombatOrder)}
-      >
-        Sort by Combat
-      </button>
+    <div id="sorting-container">
+      <h1 className="page-title">SORT BY CATEGORY</h1>
+      <div id="button-container">
+        <button
+          className="sort-button"
+          id="intelligence"
+          onClick={(e) => onSort(e, "intelligence", intelOrder, setIntelOrder)}
+        >
+          Sort by Intelligence
+        </button>
+        <button
+          className="sort-button"
+          id="strength"
+          onClick={(e) =>
+            onSort(e, "strength", strengthOrder, setStrengthOrder)
+          }
+        >
+          Sort by Strength
+        </button>
+        <button
+          className="sort-button"
+          id="speed"
+          onClick={(e) => onSort(e, "speed", speedOrder, setSpeedOrder)}
+        >
+          Sort by Speed
+        </button>
+        <button
+          className="sort-button"
+          id="durability"
+          onClick={(e) =>
+            onSort(e, "durability", durabilityOrder, setDurabilityOrder)
+          }
+        >
+          Sort by Durability
+        </button>
+        <button
+          className="sort-button"
+          id="power"
+          onClick={(e) => onSort(e, "power", powerOrder, setPowerOrder)}
+        >
+          Sort by Power
+        </button>
+        <button
+          className="sort-button"
+          id="combat"
+          onClick={(e) => onSort(e, "combat", combatOrder, setCombatOrder)}
+        >
+          Sort by Combat
+        </button>
 
-      <div>{heroesArr}</div>
+        <div>{heroesArr}</div>
+      </div>
     </div>
   );
 }
