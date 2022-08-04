@@ -305,6 +305,7 @@ ul {
 
 #right-specs {
   justify-content: center;
+  width: 50vw;
 }
 
 #specs-images {
