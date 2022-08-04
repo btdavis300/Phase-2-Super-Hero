@@ -12,7 +12,7 @@ const Home = ({
 }) => {
   return (
     <div id="deezboiz-container">
-      <h1 className="page-title">-- I NEED A HERO --</h1>
+      <h1 className="page-title">{(showHeroSpecs ? "HERO DETAILS" : "-- I NEED A HERO --")}</h1>
       {showHeroSpecs ? (
         <HeroSpecs
           featuredHero={featuredHero}

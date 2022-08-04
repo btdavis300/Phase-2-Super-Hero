@@ -13,7 +13,6 @@ function HeroSpecs({ showHeroSpecs, featuredHero, onGoBack, onFavoriteHero }) {
 
   return (
     <>
-      <h1 className="page-title">HERO DETAILS</h1>
       <div id="specs-image-container">
         <div id="left-specs">
           <h4 id="specs-titles">{featuredHero.name}</h4>
