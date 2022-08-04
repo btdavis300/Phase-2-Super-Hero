@@ -8,6 +8,7 @@ const Home = ({
   showHeroSpecs,
   onHeroCardClick,
   onGoBack,
+  onFavoriteHero,
 }) => {
   return (
     <div id="deezboiz-container">
@@ -18,7 +19,11 @@ const Home = ({
           onGoBack={onGoBack}
         />
       ) : (
-        <HeroContainer heroes={heroes} onHeroCardClick={onHeroCardClick} />
+        <HeroContainer
+          heroes={heroes}
+          onHeroCardClick={onHeroCardClick}
+          onFavoriteHero={onFavoriteHero}
+        />
       )}
     </div>
   );

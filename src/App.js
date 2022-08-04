@@ -12,12 +12,21 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [featuredHero, setFeaturedHero] = useState({});
   const [showHeroSpecs, setShowHeroSpecs] = useState(false);
+  const [favHeroes, setFavHeroes] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/superheroes/")
       .then((res) => res.json())
       .then((heroData) => {
         setHeroes(heroData);
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/favorites/")
+      .then((res) => res.json())
+      .then((favArr) => {
+        setFavHeroes(favArr);
       });
   }, []);
 
@@ -38,6 +47,35 @@ function App() {
     setShowHeroSpecs((showHeroSpecs) => !showHeroSpecs);
   }
 
+  function handleFavorites(clickedHero) {
+    const favHeroIndex = favHeroes.findIndex(
+      (hero) => hero.id === clickedHero.id
+    );
+    if (favHeroIndex < 0) {
+      fetch("http://localhost:3000/favorites/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ ...clickedHero, favorite: true }),
+      })
+        .then((r) => r.json())
+        .then((favArr) => setFavHeroes(favArr));
+      console.log(favHeroes);
+    } else {
+      alert(clickedHero.name + "is already in your Favorites");
+    }
+  }
+
+  function handleRemoveFavorite(removeHero) {
+    fetch(`http://localhost:3000/favorites/${removeHero.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then((updatedFavArr) => setFavHeroes(updatedFavArr));
+  }
+
   return (
     <div id="container">
       <NavBar
@@ -54,13 +92,17 @@ function App() {
               showHeroSpecs={showHeroSpecs}
               onHeroCardClick={handleHeroCardClick}
               onGoBack={handleGoBack}
+              onFavoriteHero={handleFavorites}
             />
           </Route>
           <Route exact path="/MYO">
             <MakeYourOwn onAddHero={handleAddHero} />
           </Route>
           <Route exact path="/favorites">
-            <Favorites heroes={heroes} />
+            <Favorites
+              heroes={favHeroes}
+              onRemoveFavoriteHero={handleRemoveFavorite}
+            />
           </Route>
           <Route exact path="/sortby">
             <SortBy heroes={displayedHeroes} setHeroes={setHeroes} />

@@ -6,13 +6,13 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
+function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
   function displayHero() {
     onHeroCardClick(hero);
   }
 
-  function clickedFavorites() {
-    onFavoriteHero(hero);
+  function clickedRemove() {
+    onRemoveFavoriteHero(hero);
   }
 
   return (
@@ -21,8 +21,8 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
         {hero.name}
       </h4>
       <div id="hero-powerstats">
-        <div>
-          <span>
+        <ul>
+          <li>
             {" "}
             <img
               className="stats-icons"
@@ -30,8 +30,8 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
               alt="intelligence"
             />{" "}
             {hero.powerstats.intelligence}{" "}
-          </span>
-          <span>
+          </li>
+          <li>
             {" "}
             <img
               className="stats-icons"
@@ -39,14 +39,13 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
               alt="strength"
             />{" "}
             {hero.powerstats.strength}{" "}
-          </span>
-          <span>
+          </li>
+          <li>
             {" "}
             <img className="stats-icons" src={speedIcon} alt="speed" />{" "}
-            {hero.powerstats.speed}
-          </span>
-          <br></br>
-          <span>
+            {hero.powerstats.speed}{" "}
+          </li>
+          <li>
             {" "}
             <img
               className="stats-icons"
@@ -54,27 +53,23 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
               alt="durability"
             />{" "}
             {hero.powerstats.durability}{" "}
-          </span>
-          <span>
+          </li>
+          <li>
             {" "}
             <img className="stats-icons" src={powerIcon} alt="power" />{" "}
             {hero.powerstats.power}{" "}
-          </span>
-          <span>
+          </li>
+          <li>
             {" "}
             <img className="stats-icons" src={combatIcon} alt="combat" />{" "}
             {hero.powerstats.combat}{" "}
-          </span>
-        </div>
+          </li>
+        </ul>
       </div>
       <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
-      <div>
-        <button onClick={clickedFavorites} id="add-to-favs">
-          Add to Favorites
-        </button>
-      </div>
+      <button onClick={clickedRemove}>Remove from Favorites</button>
     </div>
   );
 }
 
-export default HeroCard;
+export default FavoriteCard;

@@ -246,7 +246,7 @@ ul {
 }
 
 #deezboiz-container {
-  display: grid;
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -255,16 +255,5 @@ ul {
 }
 
 #specs-image-container {
-  display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        'specs-titles biography-div'
-        'specs-images biography-div'
-        'specs-images appearance-div'
-        'featuredHero-powerstats buttons-div';
-    margin: 50px 0 0 0;
-    height: 400px;
-    width: 800px;
-    justify-items: center;
+  display: flex;
 }

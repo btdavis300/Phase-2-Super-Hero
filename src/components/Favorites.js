@@ -1,16 +1,13 @@
 import React from "react";
-import HeroCard from "./HeroCard";
+import FavoriteCard from "./FavoriteCard";
 
-function Favorites({ heroes, favClicked, setFavClicked, handleFavorites }) {
-  const favoriteHeroes = heroes.filter((hero) => hero.favorite === true);
-  const displayFavorites = favoriteHeroes.map((hero) => {
+function Favorites({ heroes, onRemoveFavoriteHero }) {
+  const displayFavorites = heroes.map((hero) => {
     return (
-      <HeroCard
+      <FavoriteCard
         hero={hero}
         key={hero.id}
-        favClicked={favClicked}
-        setFavClicked={setFavClicked}
-        handleFavorites={handleFavorites}
+        onRemoveFavoriteHero={onRemoveFavoriteHero}
       />
     );
   });
