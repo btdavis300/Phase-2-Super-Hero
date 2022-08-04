@@ -21,8 +21,8 @@ function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
         {hero.name}
       </h4>
       <div id="hero-powerstats">
-        <ul>
-          <li>
+        <div>
+          <span>
             {" "}
             <img
               className="stats-icons"
@@ -30,8 +30,8 @@ function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
               alt="intelligence"
             />{" "}
             {hero.powerstats.intelligence}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img
               className="stats-icons"
@@ -39,13 +39,14 @@ function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
               alt="strength"
             />{" "}
             {hero.powerstats.strength}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img className="stats-icons" src={speedIcon} alt="speed" />{" "}
-            {hero.powerstats.speed}{" "}
-          </li>
-          <li>
+            {hero.powerstats.speed}
+          </span>
+          <br></br>
+          <span>
             {" "}
             <img
               className="stats-icons"
@@ -53,21 +54,25 @@ function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
               alt="durability"
             />{" "}
             {hero.powerstats.durability}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img className="stats-icons" src={powerIcon} alt="power" />{" "}
             {hero.powerstats.power}{" "}
-          </li>
-          <li>
+          </span>
+          <span>
             {" "}
             <img className="stats-icons" src={combatIcon} alt="combat" />{" "}
             {hero.powerstats.combat}{" "}
-          </li>
-        </ul>
+          </span>
+        </div>
       </div>
       <img src={hero.images.sm} alt="" id="images" onClick={displayHero}></img>
-      <button onClick={clickedRemove}>Remove from Favorites</button>
+      <div>
+        <button onClick={clickedRemove} id="add-to-favs">
+          Remove from Favorites
+        </button>
+      </div>
     </div>
   );
 }

@@ -12,7 +12,7 @@ function Favorites({ heroes, onRemoveFavoriteHero }) {
     );
   });
 
-  return <div>{displayFavorites}</div>;
+  return <div id="image-field">{displayFavorites}</div>;
 }
 
 export default Favorites;

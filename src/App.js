@@ -61,7 +61,7 @@ function App() {
         body: JSON.stringify({ ...clickedHero, favorite: true }),
       })
         .then((r) => r.json())
-        .then((favArr) => setFavHeroes(favArr));
+        .then(setFavHeroes([...favHeroes, clickedHero]));
       console.log(favHeroes);
     } else {
       alert(clickedHero.name + "is already in your Favorites");
@@ -73,7 +73,9 @@ function App() {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then((updatedFavArr) => setFavHeroes(updatedFavArr));
+      .then(
+        setFavHeroes(favHeroes.filter((hero) => hero.id !== removeHero.id))
+      );
   }
 
   return (
