@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 
-const NavBar = ({ onSearchChange, searchTerm, onGoBack }) => {
+const NavBar = ({ onSearchChange, searchTerm, onHomeClick }) => {
   return (
     <div className="topnav">
-      <Link onClick={onGoBack} to="/">Home</Link>
+      <Link onClick={onHomeClick} to="/">Home</Link>
       <Link to="/favorites">Favorites</Link>
       <Link to="/sortby">Sort By</Link>
       <Link to="/MYO">Make Your Own</Link>
@@ -16,4 +16,3 @@ const NavBar = ({ onSearchChange, searchTerm, onGoBack }) => {
 
 export default NavBar;
 
-// onClick={onGoBack}

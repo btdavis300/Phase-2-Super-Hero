@@ -40,6 +40,10 @@ function App() {
     setHeroes([newHero, ...heroes]);
   }
 
+  function handleHomeClick() {
+    setShowHeroSpecs(false)
+  }
+
   function handleHeroCardClick(featuredHero) {
     setFeaturedHero(featuredHero);
     setShowHeroSpecs(true);
@@ -89,7 +93,7 @@ function App() {
       <NavBar
         onSearchChange={setSearchTerm}
         searchTerm={searchTerm}
-        onGoBack={handleGoBack}
+        onHomeClick={handleHomeClick}
       />
       <div id="nav">
         <Switch>
