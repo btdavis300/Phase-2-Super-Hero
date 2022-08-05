@@ -11,7 +11,7 @@ const NavBar = ({ onSearchChange, searchTerm, onHomeClick }) => {
     <div className="topnav">
       <Link onClick={handleClick} to="/">Home</Link>
       <Link onClick={handleClick} to="/favorites">Favorites</Link>
-      <Link to="/sortby">Sort By</Link>
+      <Link onClick={handleClick} to="/sortby">Sort By</Link>
       <Link to="/MYO">Make Your Own</Link>
       <Search onSearchChange={onSearchChange} searchTerm={searchTerm} />
     </div>

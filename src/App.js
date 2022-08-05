@@ -6,6 +6,7 @@ import MakeYourOwn from "./components/MakeYourOwn";
 import Favorites from "./components/Favorites";
 import NavBar from "./components/NavBar";
 import SortBy from "./components/SortBy.js";
+import HeroSpecs from "./components/HeroSpecs";
 
 function App() {
   const [heroes, setHeroes] = useState([]);
@@ -127,7 +128,19 @@ function App() {
             />
           </Route>
           <Route exact path="/sortby">
-            <SortBy heroes={displayedHeroes} setHeroes={setHeroes} />
+            {showHeroSpecs ?
+              <HeroSpecs
+                featuredHero={featuredHero}
+                showHeroSpecs={showHeroSpecs}
+                onGoBack={handleGoBack}
+                onFavoriteHero={handleFavorites}
+              />
+              : <SortBy
+                heroes={displayedHeroes}
+                setHeroes={setHeroes}
+                onHeroCardClick={handleHeroCardClick}
+                onFavoriteHero={handleFavorites}
+              />}
           </Route>
         </Switch>
       </div>

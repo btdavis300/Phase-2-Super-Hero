@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeroCard from "./HeroCard";
 
-function SortBy({ heroes, setHeroes }) {
+function SortBy({ heroes, setHeroes, onHeroCardClick, onFavoriteHero }) {
   //STATE
   const [intelOrder, setIntelOrder] = useState(true);
   const [strengthOrder, setStrengthOrder] = useState(true);
@@ -13,7 +13,7 @@ function SortBy({ heroes, setHeroes }) {
 
   //MAPPING
   const heroesArr = heroes.map((hero) => {
-    return <HeroCard key={hero.id} hero={hero} />;
+    return <HeroCard key={hero.id} hero={hero} onHeroCardClick={onHeroCardClick} onFavoriteHero={onFavoriteHero} />;
   });
 
   //SORTING
