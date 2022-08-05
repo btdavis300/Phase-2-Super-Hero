@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import Search from "./Search";
 
 const NavBar = ({ onSearchChange, searchTerm, onHomeClick }) => {
+  function handleClick() {
+    onHomeClick()
+    onSearchChange("")
+  }
   return (
     <div className="topnav">
-      <Link onClick={onHomeClick} to="/">Home</Link>
+      <Link onClick={handleClick} to="/">Home</Link>
       <Link to="/favorites">Favorites</Link>
       <Link to="/sortby">Sort By</Link>
       <Link to="/MYO">Make Your Own</Link>
