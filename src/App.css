@@ -210,7 +210,8 @@ ul {
 #speed:hover,
 #durability:hover,
 #power:hover,
-#combat:hover {
+#combat:hover,
+#name:hover {
   color: white;
   background-color: black;
 }
