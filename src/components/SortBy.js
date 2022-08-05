@@ -9,6 +9,7 @@ function SortBy({ heroes, setHeroes }) {
   const [durabilityOrder, setDurabilityOrder] = useState(true);
   const [powerOrder, setPowerOrder] = useState(true);
   const [combatOrder, setCombatOrder] = useState(true);
+  const [nameOrder, setNameOrder] = useState(true);
 
   //MAPPING
   const heroesArr = heroes.map((hero) => {
@@ -27,11 +28,30 @@ function SortBy({ heroes, setHeroes }) {
     setHeroes([...sortedCategory]);
   }
 
+  function sortName(e, order, setOrder) {
+    e.preventDefault();
+    const heroName = e.target.id
+    const sortedNames = heroes.sort(function (a, b) {
+      return order
+        ? a[heroName].localeCompare(b[heroName])
+        : b[heroName].localeCompare(a[heroName]);
+    })
+    setOrder(!order);
+    setHeroes([...sortedNames])
+  }
+
   //BUTTONS
   return (
     <div id="sorting-container">
       <h1 className="page-title">SORT BY CATEGORY</h1>
       <div id="button-container">
+        <button
+          className="sort-button"
+          id="name"
+          onClick={(e) => sortName(e, nameOrder, setNameOrder)}
+        >
+          Sort by Name
+        </button>
         <button
           className="sort-button"
           id="intelligence"

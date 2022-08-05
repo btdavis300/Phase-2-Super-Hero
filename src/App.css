@@ -196,7 +196,8 @@ ul {
 #speed,
 #durability,
 #power,
-#combat {
+#combat,
+#name {
   color: black;
   background-color: white;
   cursor: pointer;
