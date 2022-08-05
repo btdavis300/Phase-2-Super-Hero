@@ -292,7 +292,8 @@ ul {
   background-color: black;
 }
 
-#deezboiz-container {
+#deezboiz-container,
+#nav {
   display: flex;
   flex-direction: column;
   align-items: center;
