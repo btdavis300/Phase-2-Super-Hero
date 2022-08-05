@@ -44,15 +44,21 @@
 
 #image-container {
   display: inline-block;
+  border: solid black;
+  padding-bottom: 10px;
+  margin-top: 25px;
+  margin-left: 16px;
 }
 
 #titles {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: 100;
   text-align: center;
   cursor: pointer;
   color: black;
   background-color: white;
+  padding-top: 10px;
+  display: inline-block;
 }
 
 #titles:hover {
@@ -61,16 +67,31 @@
 
 #images {
   border-radius: 35px;
-  margin: 20px;
+  padding: 20px;
   cursor: pointer;
+  width: 180px;
+  height: 240px;
 }
 
-/* #search-title {
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  font-weight: 100;
-  margin-bottom: 0px;
-} */
+#image-background {
+  background-color: rgba(169, 169, 169, 0.5);
+  margin-bottom: 10px;
+}
+
+#image-background:hover {
+  background-color: rgba(169, 169, 169, 0.35);
+  margin-bottom: 10px;
+}
+
+#favorite-image-background {
+  background-color: rgba(255, 107, 107, 0.5);
+  margin-bottom: 10px;
+}
+
+#favorite-image-background:hover {
+  background-color: rgba(255, 107, 107, 0.35);
+  margin-bottom: 10px;
+}
 
 .searchbar {
   text-align: center;
@@ -86,11 +107,14 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
+  text-align: center;
 }
 
 .topnav {
   overflow: hidden;
-  background-color: darkgrey
+  background-color: darkgrey;
+  position: sticky;
+  top: 0;
 }
 
 .topnav a {
@@ -151,7 +175,7 @@
 
 #hero-powerstats {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 ul {
@@ -163,4 +187,202 @@ ul {
 .stats-icons {
   width: 15px;
   height: 15px;
+}
+
+.specs-stats-icons {
+  display: flex;
+  align-items: center;
+}
+
+#intelligence,
+#strength,
+#speed,
+#durability,
+#power,
+#combat,
+#name {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-left: 10px;
+}
+
+#intelligence:hover,
+#strength:hover,
+#speed:hover,
+#durability:hover,
+#power:hover,
+#combat:hover,
+#name:hover {
+  color: white;
+  background-color: black;
+}
+
+#favorites-button {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#favorites-button:hover {
+  color: white;
+  background-color: black;
+}
+
+#submit-button {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#submit-button:hover {
+  color: white;
+  background-color: black;
+}
+
+#button-container {
+  display: block;
+  text-align: center;
+  margin: 15px;
+  margin-top: 50px;
+}
+
+.sort-button {
+  font-size: 20px;
+}
+
+#specs-favs {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#specs-favs:hover {
+  color: white;
+  background-color: black;
+}
+
+#specs-back {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#specs-back:hover {
+  color: white;
+  background-color: black;
+}
+
+#add-to-favs {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#add-to-favs:hover {
+  color: white;
+  background-color: black;
+}
+
+#deezboiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left-specs,
+#right-specs {
+  display: flex;
+  flex-direction: column;
+}
+
+#left-specs {
+  align-items: center;
+}
+
+#right-specs {
+  justify-content: center;
+  width: 50vw;
+}
+
+#specs-images {
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+#specs-image-container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+#specs-titles {
+  font-size: 42px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+}
+
+#featuredHero-powerstats {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.right-specs-titles {
+  display: flex;
+  justify-content: center;
+}
+
+.page-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 50px
+}
+
+#favorite-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sorting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#new-bot-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+#name-image-form,
+#first-three-specs-form,
+#second-three-specs-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
 }

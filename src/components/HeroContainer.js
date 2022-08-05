@@ -1,9 +1,16 @@
 import React from "react";
 import HeroCard from "./HeroCard";
 
-function HeroContainer({ heroes, handleFavorites, favClicked, setFavClicked }) {
+function HeroContainer({ heroes, onHeroCardClick, onFavoriteHero }) {
   const heroArr = heroes.map((hero) => {
-    return <HeroCard key={hero.id} hero={hero} handleFavorites={handleFavorites} favClicked={favClicked} setFavClicked={setFavClicked} />;
+    return (
+      <HeroCard
+        key={hero.id}
+        hero={hero}
+        onHeroCardClick={onHeroCardClick}
+        onFavoriteHero={onFavoriteHero}
+      />
+    );
   });
   return <div id="image-field"> {heroArr} </div>;
 }

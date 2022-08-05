@@ -6,26 +6,18 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
+function FavoriteCard({ hero, onHeroCardClick, onRemoveFavoriteHero }) {
   function displayHero() {
     onHeroCardClick(hero);
   }
 
-  function clickedFavorites() {
-    onFavoriteHero(hero);
-  }
-
-  function onFavorite(e) {
-    e.stopPropagation()
-    setFavClicked((favClicked) => !favClicked)
-    console.log(favClicked)
-    handleFavorites(hero)
-
+  function clickedRemove() {
+    onRemoveFavoriteHero(hero);
   }
 
   return (
     <div id="image-container">
-      <div id="image-background">
+      <div id="favorite-image-background">
         <img
           src={hero.images.sm}
           alt=""
@@ -84,12 +76,12 @@ function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
         </div>
       </div>
       <div>
-        <button onClick={clickedFavorites} id="add-to-favs">
-          Add to Favorites
+        <button onClick={clickedRemove} id="add-to-favs">
+          Remove from Favorites
         </button>
       </div>
     </div>
   );
 }
 
-export default HeroCard;
+export default FavoriteCard;

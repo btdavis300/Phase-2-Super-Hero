@@ -1,14 +1,32 @@
 import React from "react";
 import HeroContainer from "./HeroContainer";
+import HeroSpecs from "./HeroSpecs";
 
-const Home = ({ heroes, handleFavorites, favClicked, setFavClicked }) => {
+const Home = ({
+  heroes,
+  featuredHero,
+  showHeroSpecs,
+  onHeroCardClick,
+  onGoBack,
+  onFavoriteHero,
+}) => {
   return (
-    <div>
-      <HeroContainer
-        heroes={heroes}
-        handleFavorites={handleFavorites}
-        favClicked={favClicked}
-        setFavClicked={setFavClicked} />
+    <div id="deezboiz-container">
+      <h1 className="page-title">{(showHeroSpecs ? "HERO DETAILS" : "I NEED A HERO")}</h1>
+      {showHeroSpecs ? (
+        <HeroSpecs
+          featuredHero={featuredHero}
+          showHeroSpecs={showHeroSpecs}
+          onGoBack={onGoBack}
+          onFavoriteHero={onFavoriteHero}
+        />
+      ) : (
+        <HeroContainer
+          heroes={heroes}
+          onHeroCardClick={onHeroCardClick}
+          onFavoriteHero={onFavoriteHero}
+        />
+      )}
     </div>
   );
 };

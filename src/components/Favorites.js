@@ -1,18 +1,33 @@
-import React from 'react'
-import HeroCard from './HeroCard'
+import React from "react";
+import FavoriteCard from "./FavoriteCard";
+import HeroSpecs from "./HeroSpecs";
 
-function Favorites({ heroes, favClicked, setFavClicked, handleFavorites }) {
-
-    const favoriteHeroes = heroes.filter(hero => hero.favorite === true)
-    const displayFavorites = favoriteHeroes.map(hero => {
-        return <HeroCard hero={hero} key={hero.id} favClicked={favClicked} setFavClicked={setFavClicked} handleFavorites={handleFavorites} />
-    })
-
+function Favorites({ heroes, onRemoveFavoriteHero, showHeroSpecs, featuredHero, onGoBack, onFavoriteHero, onHeroCardClick }) {
+  const displayFavorites = heroes.map((hero) => {
     return (
-        <div>
-            {displayFavorites}
-        </div>
-    )
+      <FavoriteCard
+        hero={hero}
+        key={hero.id}
+        onRemoveFavoriteHero={onRemoveFavoriteHero}
+        onHeroCardClick={onHeroCardClick}
+      />
+    );
+  });
+
+  return (
+    <div id="favorite-container">
+      <h1 className="page-title">MY FAVORITES</h1>
+      <div id="image-field">
+        {showHeroSpecs ?
+          <HeroSpecs
+            featuredHero={featuredHero}
+            showHeroSpecs={showHeroSpecs}
+            onGoBack={onGoBack}
+            onFavoriteHero={onFavoriteHero}
+          />
+          : displayFavorites}</div>
+    </div>
+  );
 }
 
-export default Favorites
+export default Favorites;
