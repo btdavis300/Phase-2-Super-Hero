@@ -1,11 +1,15 @@
 Pitch:
-Superhero Database will allow users to learn more about their favorite superhero.
+I Need a Hero will allow users to learn more about their favorite superhero.
+
+Host link:
+https://ineedaheroflatironproject2.netlify.app/
+
+To run program: 
+use `npm start`
 
 User Stories:
 
 -As a user, I can view a list of superheroes upon initial render of page.
-
--When I scroll down, the list of superheroes re-renders the list to view more superheroes.
 
 -As a user, I can view superheroes by category.
 
