@@ -119,6 +119,11 @@ function App() {
             <Favorites
               heroes={favHeroes}
               onRemoveFavoriteHero={handleRemoveFavorite}
+              showHeroSpecs={showHeroSpecs}
+              onGoBack={handleGoBack}
+              onFavoriteHero={handleFavorites}
+              featuredHero={featuredHero}
+              onHeroCardClick={handleHeroCardClick}
             />
           </Route>
           <Route exact path="/sortby">

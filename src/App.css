@@ -78,8 +78,18 @@
   margin-bottom: 10px;
 }
 
+#image-background:hover {
+  background-color: rgba(169, 169, 169, 0.35);
+  margin-bottom: 10px;
+}
+
 #favorite-image-background {
   background-color: rgba(255, 107, 107, 0.5);
+  margin-bottom: 10px;
+}
+
+#favorite-image-background:hover {
+  background-color: rgba(255, 107, 107, 0.35);
   margin-bottom: 10px;
 }
 
