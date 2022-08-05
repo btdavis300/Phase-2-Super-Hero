@@ -36,7 +36,7 @@ function MakeYourOwn({ onAddHero, MYOHeroes, onFavoriteHero, onMYOHeroes }) {
         combat: combat,
       },
     };
-    fetch("http://localhost:3000/superheroes", {
+    fetch("https://phase-2-data.herokuapp.com/superheroes/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -17,7 +17,7 @@ function App() {
   const [MYOHeroes, setMYOHeroes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/superheroes/")
+    fetch("https://phase-2-data.herokuapp.com/superheroes/")
       .then((res) => res.json())
       .then((heroData) => {
         setHeroes(heroData);
@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/favorites/")
+    fetch("https://phase-2-data.herokuapp.com/favorites/")
       .then((res) => res.json())
       .then((favArr) => {
         setFavHeroes(favArr);
@@ -63,7 +63,7 @@ function App() {
       (hero) => hero.id === clickedHero.id
     );
     if (favHeroIndex < 0) {
-      fetch("http://localhost:3000/favorites/", {
+      fetch("https://phase-2-data.herokuapp.com/favorites/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ function App() {
   }
 
   function handleRemoveFavorite(removeHero) {
-    fetch(`http://localhost:3000/favorites/${removeHero.id}`, {
+    fetch(`https://phase-2-data.herokuapp.com/favorites/${removeHero.id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
