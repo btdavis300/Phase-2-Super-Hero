@@ -6,7 +6,7 @@ import powerIcon from "../assets/power.png";
 import speedIcon from "../assets/speed.png";
 import strengthIcon from "../assets/strength.png";
 
-function HeroCard({ hero, onHeroCardClick, onFavoriteHero }) {
+function HeroCard({ hero, onHeroCardClick, onFavoriteHero, setFavClicked, favClicked, handleFavorites }) {
   function displayHero() {
     onHeroCardClick(hero);
   }
